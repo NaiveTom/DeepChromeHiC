@@ -1,0 +1,7014 @@
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:29:42 2021
+
+begin time >>> Wed Oct  6 02:29:42 2021
+
+begin time >>> Wed Oct  6 02:29:42 2021
+
+begin time >>> Wed Oct  6 02:29:42 2021
+
+begin time >>> Wed Oct  6 02:29:42 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+ME.pp
+########################################
+
+Found 430 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6673661438615468, 1: 0.6672147106544077}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6672147106544077
+----------------------------------------
+
+end time >>> Wed Oct  6 02:29:51 2021
+
+end time >>> Wed Oct  6 02:29:51 2021
+
+end time >>> Wed Oct  6 02:29:51 2021
+
+end time >>> Wed Oct  6 02:29:51 2021
+
+end time >>> Wed Oct  6 02:29:51 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 9.813413858413696
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:29:53 2021
+
+begin time >>> Wed Oct  6 02:29:53 2021
+
+begin time >>> Wed Oct  6 02:29:53 2021
+
+begin time >>> Wed Oct  6 02:29:53 2021
+
+begin time >>> Wed Oct  6 02:29:53 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 430 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 430 images belonging to 2 classes.
+Found 430 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.6487290427257977
+----------------------------------------
+
+end time >>> Wed Oct  6 02:30:04 2021
+
+end time >>> Wed Oct  6 02:30:04 2021
+
+end time >>> Wed Oct  6 02:30:04 2021
+
+end time >>> Wed Oct  6 02:30:04 2021
+
+end time >>> Wed Oct  6 02:30:04 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 11.349525213241577
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:30:05 2021
+
+begin time >>> Wed Oct  6 02:30:05 2021
+
+begin time >>> Wed Oct  6 02:30:05 2021
+
+begin time >>> Wed Oct  6 02:30:05 2021
+
+begin time >>> Wed Oct  6 02:30:05 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+ME.pp
+########################################
+
+Found 430 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6907193077339102, 1: 0.690730124391563}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.690730124391563
+----------------------------------------
+
+end time >>> Wed Oct  6 02:30:19 2021
+
+end time >>> Wed Oct  6 02:30:19 2021
+
+end time >>> Wed Oct  6 02:30:19 2021
+
+end time >>> Wed Oct  6 02:30:19 2021
+
+end time >>> Wed Oct  6 02:30:19 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 14.371092319488525
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:30:20 2021
+
+begin time >>> Wed Oct  6 02:30:20 2021
+
+begin time >>> Wed Oct  6 02:30:20 2021
+
+begin time >>> Wed Oct  6 02:30:20 2021
+
+begin time >>> Wed Oct  6 02:30:20 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+ME.pp
+########################################
+
+Found 430 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6652677122769065, 1: 0.6652785289345592}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6652785289345592
+----------------------------------------
+
+end time >>> Wed Oct  6 02:30:31 2021
+
+end time >>> Wed Oct  6 02:30:31 2021
+
+end time >>> Wed Oct  6 02:30:31 2021
+
+end time >>> Wed Oct  6 02:30:31 2021
+
+end time >>> Wed Oct  6 02:30:31 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 11.021620273590088
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:30:32 2021
+
+begin time >>> Wed Oct  6 02:30:32 2021
+
+begin time >>> Wed Oct  6 02:30:32 2021
+
+begin time >>> Wed Oct  6 02:30:32 2021
+
+begin time >>> Wed Oct  6 02:30:32 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+ME.pp
+########################################
+
+Found 430 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6025419145484046, 1: 0.6025310978907518}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6025310978907518
+----------------------------------------
+
+end time >>> Wed Oct  6 02:30:43 2021
+
+end time >>> Wed Oct  6 02:30:43 2021
+
+end time >>> Wed Oct  6 02:30:43 2021
+
+end time >>> Wed Oct  6 02:30:43 2021
+
+end time >>> Wed Oct  6 02:30:43 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 11.600486755371094
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:30:44 2021
+
+begin time >>> Wed Oct  6 02:30:44 2021
+
+begin time >>> Wed Oct  6 02:30:44 2021
+
+begin time >>> Wed Oct  6 02:30:44 2021
+
+begin time >>> Wed Oct  6 02:30:44 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/ME.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6646341463414634
+----------------------------------------
+
+end time >>> Wed Oct  6 02:30:56 2021
+
+end time >>> Wed Oct  6 02:30:56 2021
+
+end time >>> Wed Oct  6 02:30:56 2021
+
+end time >>> Wed Oct  6 02:30:56 2021
+
+end time >>> Wed Oct  6 02:30:56 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 11.770233392715454
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:30:57 2021
+
+begin time >>> Wed Oct  6 02:30:57 2021
+
+begin time >>> Wed Oct  6 02:30:57 2021
+
+begin time >>> Wed Oct  6 02:30:57 2021
+
+begin time >>> Wed Oct  6 02:30:57 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/ME.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6647212543554007
+----------------------------------------
+
+end time >>> Wed Oct  6 02:31:07 2021
+
+end time >>> Wed Oct  6 02:31:07 2021
+
+end time >>> Wed Oct  6 02:31:07 2021
+
+end time >>> Wed Oct  6 02:31:07 2021
+
+end time >>> Wed Oct  6 02:31:07 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 9.56829047203064
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:31:08 2021
+
+begin time >>> Wed Oct  6 02:31:08 2021
+
+begin time >>> Wed Oct  6 02:31:08 2021
+
+begin time >>> Wed Oct  6 02:31:08 2021
+
+begin time >>> Wed Oct  6 02:31:08 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/ME.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6917682926829268
+----------------------------------------
+
+end time >>> Wed Oct  6 02:31:17 2021
+
+end time >>> Wed Oct  6 02:31:17 2021
+
+end time >>> Wed Oct  6 02:31:17 2021
+
+end time >>> Wed Oct  6 02:31:17 2021
+
+end time >>> Wed Oct  6 02:31:17 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 9.202915668487549
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:31:18 2021
+
+begin time >>> Wed Oct  6 02:31:18 2021
+
+begin time >>> Wed Oct  6 02:31:18 2021
+
+begin time >>> Wed Oct  6 02:31:18 2021
+
+begin time >>> Wed Oct  6 02:31:18 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/ME.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6625000000000001
+----------------------------------------
+
+end time >>> Wed Oct  6 02:31:30 2021
+
+end time >>> Wed Oct  6 02:31:30 2021
+
+end time >>> Wed Oct  6 02:31:30 2021
+
+end time >>> Wed Oct  6 02:31:30 2021
+
+end time >>> Wed Oct  6 02:31:30 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 11.089517831802368
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:31:31 2021
+
+begin time >>> Wed Oct  6 02:31:31 2021
+
+begin time >>> Wed Oct  6 02:31:31 2021
+
+begin time >>> Wed Oct  6 02:31:31 2021
+
+begin time >>> Wed Oct  6 02:31:31 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = ME.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/ME.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6440113240418118
+----------------------------------------
+
+end time >>> Wed Oct  6 02:31:42 2021
+
+end time >>> Wed Oct  6 02:31:42 2021
+
+end time >>> Wed Oct  6 02:31:42 2021
+
+end time >>> Wed Oct  6 02:31:42 2021
+
+end time >>> Wed Oct  6 02:31:42 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 11.755392074584961
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:31:43 2021
+
+begin time >>> Wed Oct  6 02:31:43 2021
+
+begin time >>> Wed Oct  6 02:31:43 2021
+
+begin time >>> Wed Oct  6 02:31:43 2021
+
+begin time >>> Wed Oct  6 02:31:43 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+IMR90.pp
+########################################
+
+Found 486 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.718394892377517, 1: 0.7186573862385477}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7186573862385477
+----------------------------------------
+
+end time >>> Wed Oct  6 02:31:55 2021
+
+end time >>> Wed Oct  6 02:31:55 2021
+
+end time >>> Wed Oct  6 02:31:55 2021
+
+end time >>> Wed Oct  6 02:31:55 2021
+
+end time >>> Wed Oct  6 02:31:55 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 11.970776081085205
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:31:56 2021
+
+begin time >>> Wed Oct  6 02:31:56 2021
+
+begin time >>> Wed Oct  6 02:31:56 2021
+
+begin time >>> Wed Oct  6 02:31:56 2021
+
+begin time >>> Wed Oct  6 02:31:56 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 486 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 486 images belonging to 2 classes.
+Found 486 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.718157801148199
+----------------------------------------
+
+end time >>> Wed Oct  6 02:32:09 2021
+
+end time >>> Wed Oct  6 02:32:09 2021
+
+end time >>> Wed Oct  6 02:32:09 2021
+
+end time >>> Wed Oct  6 02:32:09 2021
+
+end time >>> Wed Oct  6 02:32:09 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 12.347924709320068
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:32:10 2021
+
+begin time >>> Wed Oct  6 02:32:10 2021
+
+begin time >>> Wed Oct  6 02:32:10 2021
+
+begin time >>> Wed Oct  6 02:32:10 2021
+
+begin time >>> Wed Oct  6 02:32:10 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+IMR90.pp
+########################################
+
+Found 486 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7548392013412589, 1: 0.7548307337973549}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7548307337973549
+----------------------------------------
+
+end time >>> Wed Oct  6 02:32:21 2021
+
+end time >>> Wed Oct  6 02:32:21 2021
+
+end time >>> Wed Oct  6 02:32:21 2021
+
+end time >>> Wed Oct  6 02:32:21 2021
+
+end time >>> Wed Oct  6 02:32:21 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 11.528237342834473
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:32:22 2021
+
+begin time >>> Wed Oct  6 02:32:22 2021
+
+begin time >>> Wed Oct  6 02:32:22 2021
+
+begin time >>> Wed Oct  6 02:32:22 2021
+
+begin time >>> Wed Oct  6 02:32:22 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+IMR90.pp
+########################################
+
+Found 486 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7364900337008247, 1: 0.7364053582617825}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7364053582617825
+----------------------------------------
+
+end time >>> Wed Oct  6 02:32:32 2021
+
+end time >>> Wed Oct  6 02:32:32 2021
+
+end time >>> Wed Oct  6 02:32:32 2021
+
+end time >>> Wed Oct  6 02:32:32 2021
+
+end time >>> Wed Oct  6 02:32:32 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 10.380395650863647
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:32:33 2021
+
+begin time >>> Wed Oct  6 02:32:33 2021
+
+begin time >>> Wed Oct  6 02:32:33 2021
+
+begin time >>> Wed Oct  6 02:32:33 2021
+
+begin time >>> Wed Oct  6 02:32:33 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+IMR90.pp
+########################################
+
+Found 486 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7263289810157665, 1: 0.7263289810157665}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7263289810157665
+----------------------------------------
+
+end time >>> Wed Oct  6 02:32:45 2021
+
+end time >>> Wed Oct  6 02:32:45 2021
+
+end time >>> Wed Oct  6 02:32:45 2021
+
+end time >>> Wed Oct  6 02:32:45 2021
+
+end time >>> Wed Oct  6 02:32:45 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 11.783167600631714
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:32:46 2021
+
+begin time >>> Wed Oct  6 02:32:46 2021
+
+begin time >>> Wed Oct  6 02:32:46 2021
+
+begin time >>> Wed Oct  6 02:32:46 2021
+
+begin time >>> Wed Oct  6 02:32:46 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/IMR90.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6821626223925075
+----------------------------------------
+
+end time >>> Wed Oct  6 02:32:57 2021
+
+end time >>> Wed Oct  6 02:32:57 2021
+
+end time >>> Wed Oct  6 02:32:57 2021
+
+end time >>> Wed Oct  6 02:32:57 2021
+
+end time >>> Wed Oct  6 02:32:57 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 11.499413251876831
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:32:58 2021
+
+begin time >>> Wed Oct  6 02:32:58 2021
+
+begin time >>> Wed Oct  6 02:32:58 2021
+
+begin time >>> Wed Oct  6 02:32:58 2021
+
+begin time >>> Wed Oct  6 02:32:58 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/IMR90.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6847339293316304
+----------------------------------------
+
+end time >>> Wed Oct  6 02:33:10 2021
+
+end time >>> Wed Oct  6 02:33:10 2021
+
+end time >>> Wed Oct  6 02:33:10 2021
+
+end time >>> Wed Oct  6 02:33:10 2021
+
+end time >>> Wed Oct  6 02:33:10 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 11.941543340682983
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:33:11 2021
+
+begin time >>> Wed Oct  6 02:33:11 2021
+
+begin time >>> Wed Oct  6 02:33:11 2021
+
+begin time >>> Wed Oct  6 02:33:11 2021
+
+begin time >>> Wed Oct  6 02:33:11 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/IMR90.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6389442315879097
+----------------------------------------
+
+end time >>> Wed Oct  6 02:33:21 2021
+
+end time >>> Wed Oct  6 02:33:21 2021
+
+end time >>> Wed Oct  6 02:33:21 2021
+
+end time >>> Wed Oct  6 02:33:21 2021
+
+end time >>> Wed Oct  6 02:33:21 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 9.4901123046875
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:33:22 2021
+
+begin time >>> Wed Oct  6 02:33:22 2021
+
+begin time >>> Wed Oct  6 02:33:22 2021
+
+begin time >>> Wed Oct  6 02:33:22 2021
+
+begin time >>> Wed Oct  6 02:33:22 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/IMR90.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6864197530864198
+----------------------------------------
+
+end time >>> Wed Oct  6 02:33:33 2021
+
+end time >>> Wed Oct  6 02:33:33 2021
+
+end time >>> Wed Oct  6 02:33:33 2021
+
+end time >>> Wed Oct  6 02:33:33 2021
+
+end time >>> Wed Oct  6 02:33:33 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 11.713001489639282
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:33:34 2021
+
+begin time >>> Wed Oct  6 02:33:34 2021
+
+begin time >>> Wed Oct  6 02:33:34 2021
+
+begin time >>> Wed Oct  6 02:33:34 2021
+
+begin time >>> Wed Oct  6 02:33:34 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = IMR90.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/IMR90.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6578118348233291
+----------------------------------------
+
+end time >>> Wed Oct  6 02:33:51 2021
+
+end time >>> Wed Oct  6 02:33:51 2021
+
+end time >>> Wed Oct  6 02:33:51 2021
+
+end time >>> Wed Oct  6 02:33:51 2021
+
+end time >>> Wed Oct  6 02:33:51 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 16.16937255859375
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:33:52 2021
+
+begin time >>> Wed Oct  6 02:33:52 2021
+
+begin time >>> Wed Oct  6 02:33:52 2021
+
+begin time >>> Wed Oct  6 02:33:52 2021
+
+begin time >>> Wed Oct  6 02:33:52 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+MSC.pp
+########################################
+
+Found 494 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7088954088741006, 1: 0.708887213361963}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.708887213361963
+----------------------------------------
+
+end time >>> Wed Oct  6 02:34:04 2021
+
+end time >>> Wed Oct  6 02:34:04 2021
+
+end time >>> Wed Oct  6 02:34:04 2021
+
+end time >>> Wed Oct  6 02:34:04 2021
+
+end time >>> Wed Oct  6 02:34:04 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 12.385173797607422
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:34:05 2021
+
+begin time >>> Wed Oct  6 02:34:05 2021
+
+begin time >>> Wed Oct  6 02:34:05 2021
+
+begin time >>> Wed Oct  6 02:34:05 2021
+
+begin time >>> Wed Oct  6 02:34:05 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 494 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 494 images belonging to 2 classes.
+Found 494 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.712026094510646
+----------------------------------------
+
+end time >>> Wed Oct  6 02:34:18 2021
+
+end time >>> Wed Oct  6 02:34:18 2021
+
+end time >>> Wed Oct  6 02:34:18 2021
+
+end time >>> Wed Oct  6 02:34:18 2021
+
+end time >>> Wed Oct  6 02:34:18 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 12.915231704711914
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:34:19 2021
+
+begin time >>> Wed Oct  6 02:34:19 2021
+
+begin time >>> Wed Oct  6 02:34:19 2021
+
+begin time >>> Wed Oct  6 02:34:19 2021
+
+begin time >>> Wed Oct  6 02:34:19 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+MSC.pp
+########################################
+
+Found 494 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.760166532806635, 1: 0.760166532806635}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.760166532806635
+----------------------------------------
+
+end time >>> Wed Oct  6 02:34:31 2021
+
+end time >>> Wed Oct  6 02:34:31 2021
+
+end time >>> Wed Oct  6 02:34:31 2021
+
+end time >>> Wed Oct  6 02:34:31 2021
+
+end time >>> Wed Oct  6 02:34:31 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 11.894854307174683
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:34:32 2021
+
+begin time >>> Wed Oct  6 02:34:32 2021
+
+begin time >>> Wed Oct  6 02:34:32 2021
+
+begin time >>> Wed Oct  6 02:34:32 2021
+
+begin time >>> Wed Oct  6 02:34:32 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+MSC.pp
+########################################
+
+Found 494 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7573800586798669, 1: 0.7574046452162796}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7574046452162796
+----------------------------------------
+
+end time >>> Wed Oct  6 02:34:42 2021
+
+end time >>> Wed Oct  6 02:34:42 2021
+
+end time >>> Wed Oct  6 02:34:42 2021
+
+end time >>> Wed Oct  6 02:34:42 2021
+
+end time >>> Wed Oct  6 02:34:42 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 10.508156538009644
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:34:43 2021
+
+begin time >>> Wed Oct  6 02:34:43 2021
+
+begin time >>> Wed Oct  6 02:34:43 2021
+
+begin time >>> Wed Oct  6 02:34:43 2021
+
+begin time >>> Wed Oct  6 02:34:43 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+MSC.pp
+########################################
+
+Found 494 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7040436656886688, 1: 0.7040436656886689}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7040436656886689
+----------------------------------------
+
+end time >>> Wed Oct  6 02:34:56 2021
+
+end time >>> Wed Oct  6 02:34:56 2021
+
+end time >>> Wed Oct  6 02:34:56 2021
+
+end time >>> Wed Oct  6 02:34:56 2021
+
+end time >>> Wed Oct  6 02:34:56 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 12.670957565307617
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:34:57 2021
+
+begin time >>> Wed Oct  6 02:34:57 2021
+
+begin time >>> Wed Oct  6 02:34:57 2021
+
+begin time >>> Wed Oct  6 02:34:57 2021
+
+begin time >>> Wed Oct  6 02:34:57 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/MSC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6664587710084033
+----------------------------------------
+
+end time >>> Wed Oct  6 02:35:08 2021
+
+end time >>> Wed Oct  6 02:35:08 2021
+
+end time >>> Wed Oct  6 02:35:08 2021
+
+end time >>> Wed Oct  6 02:35:08 2021
+
+end time >>> Wed Oct  6 02:35:08 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 11.730474948883057
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:35:10 2021
+
+begin time >>> Wed Oct  6 02:35:10 2021
+
+begin time >>> Wed Oct  6 02:35:10 2021
+
+begin time >>> Wed Oct  6 02:35:10 2021
+
+begin time >>> Wed Oct  6 02:35:10 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/MSC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6551831670168067
+----------------------------------------
+
+end time >>> Wed Oct  6 02:35:21 2021
+
+end time >>> Wed Oct  6 02:35:21 2021
+
+end time >>> Wed Oct  6 02:35:21 2021
+
+end time >>> Wed Oct  6 02:35:21 2021
+
+end time >>> Wed Oct  6 02:35:21 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 11.941297054290771
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:35:22 2021
+
+begin time >>> Wed Oct  6 02:35:22 2021
+
+begin time >>> Wed Oct  6 02:35:22 2021
+
+begin time >>> Wed Oct  6 02:35:22 2021
+
+begin time >>> Wed Oct  6 02:35:22 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/MSC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.656561843487395
+----------------------------------------
+
+end time >>> Wed Oct  6 02:35:32 2021
+
+end time >>> Wed Oct  6 02:35:32 2021
+
+end time >>> Wed Oct  6 02:35:32 2021
+
+end time >>> Wed Oct  6 02:35:32 2021
+
+end time >>> Wed Oct  6 02:35:32 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 10.004372835159302
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:35:34 2021
+
+begin time >>> Wed Oct  6 02:35:34 2021
+
+begin time >>> Wed Oct  6 02:35:34 2021
+
+begin time >>> Wed Oct  6 02:35:34 2021
+
+begin time >>> Wed Oct  6 02:35:34 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/MSC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6618631827731092
+----------------------------------------
+
+end time >>> Wed Oct  6 02:35:48 2021
+
+end time >>> Wed Oct  6 02:35:48 2021
+
+end time >>> Wed Oct  6 02:35:48 2021
+
+end time >>> Wed Oct  6 02:35:48 2021
+
+end time >>> Wed Oct  6 02:35:48 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 14.749551773071289
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:35:49 2021
+
+begin time >>> Wed Oct  6 02:35:49 2021
+
+begin time >>> Wed Oct  6 02:35:49 2021
+
+begin time >>> Wed Oct  6 02:35:49 2021
+
+begin time >>> Wed Oct  6 02:35:49 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = MSC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/MSC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6808856355042017
+----------------------------------------
+
+end time >>> Wed Oct  6 02:36:01 2021
+
+end time >>> Wed Oct  6 02:36:01 2021
+
+end time >>> Wed Oct  6 02:36:01 2021
+
+end time >>> Wed Oct  6 02:36:01 2021
+
+end time >>> Wed Oct  6 02:36:01 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 11.576015710830688
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:36:02 2021
+
+begin time >>> Wed Oct  6 02:36:02 2021
+
+begin time >>> Wed Oct  6 02:36:02 2021
+
+begin time >>> Wed Oct  6 02:36:02 2021
+
+begin time >>> Wed Oct  6 02:36:02 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+AD2.pp
+########################################
+
+Found 540 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6399519890260632, 1: 0.6399794238683127}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6399794238683127
+----------------------------------------
+
+end time >>> Wed Oct  6 02:36:14 2021
+
+end time >>> Wed Oct  6 02:36:14 2021
+
+end time >>> Wed Oct  6 02:36:14 2021
+
+end time >>> Wed Oct  6 02:36:14 2021
+
+end time >>> Wed Oct  6 02:36:14 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 11.781919717788696
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:36:15 2021
+
+begin time >>> Wed Oct  6 02:36:15 2021
+
+begin time >>> Wed Oct  6 02:36:15 2021
+
+begin time >>> Wed Oct  6 02:36:15 2021
+
+begin time >>> Wed Oct  6 02:36:15 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 540 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 540 images belonging to 2 classes.
+Found 540 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.633559670781893
+----------------------------------------
+
+end time >>> Wed Oct  6 02:36:27 2021
+
+end time >>> Wed Oct  6 02:36:27 2021
+
+end time >>> Wed Oct  6 02:36:27 2021
+
+end time >>> Wed Oct  6 02:36:27 2021
+
+end time >>> Wed Oct  6 02:36:27 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 12.602643251419067
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:36:28 2021
+
+begin time >>> Wed Oct  6 02:36:28 2021
+
+begin time >>> Wed Oct  6 02:36:28 2021
+
+begin time >>> Wed Oct  6 02:36:28 2021
+
+begin time >>> Wed Oct  6 02:36:28 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+AD2.pp
+########################################
+
+Found 540 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6492524005486968, 1: 0.6492729766803842}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6492729766803842
+----------------------------------------
+
+end time >>> Wed Oct  6 02:36:40 2021
+
+end time >>> Wed Oct  6 02:36:40 2021
+
+end time >>> Wed Oct  6 02:36:40 2021
+
+end time >>> Wed Oct  6 02:36:40 2021
+
+end time >>> Wed Oct  6 02:36:40 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 11.625701427459717
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:36:41 2021
+
+begin time >>> Wed Oct  6 02:36:41 2021
+
+begin time >>> Wed Oct  6 02:36:41 2021
+
+begin time >>> Wed Oct  6 02:36:41 2021
+
+begin time >>> Wed Oct  6 02:36:41 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+AD2.pp
+########################################
+
+Found 540 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6594307270233197, 1: 0.6594101508916324}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6594101508916324
+----------------------------------------
+
+end time >>> Wed Oct  6 02:36:51 2021
+
+end time >>> Wed Oct  6 02:36:51 2021
+
+end time >>> Wed Oct  6 02:36:51 2021
+
+end time >>> Wed Oct  6 02:36:51 2021
+
+end time >>> Wed Oct  6 02:36:51 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 10.315176010131836
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:36:52 2021
+
+begin time >>> Wed Oct  6 02:36:52 2021
+
+begin time >>> Wed Oct  6 02:36:52 2021
+
+begin time >>> Wed Oct  6 02:36:52 2021
+
+begin time >>> Wed Oct  6 02:36:52 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+AD2.pp
+########################################
+
+Found 540 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.63480109739369, 1: 0.6348010973936901}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6348010973936901
+----------------------------------------
+
+end time >>> Wed Oct  6 02:37:04 2021
+
+end time >>> Wed Oct  6 02:37:04 2021
+
+end time >>> Wed Oct  6 02:37:04 2021
+
+end time >>> Wed Oct  6 02:37:04 2021
+
+end time >>> Wed Oct  6 02:37:04 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 12.469017744064331
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:37:05 2021
+
+begin time >>> Wed Oct  6 02:37:05 2021
+
+begin time >>> Wed Oct  6 02:37:05 2021
+
+begin time >>> Wed Oct  6 02:37:05 2021
+
+begin time >>> Wed Oct  6 02:37:05 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/AD2.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6127270731573459
+----------------------------------------
+
+end time >>> Wed Oct  6 02:37:17 2021
+
+end time >>> Wed Oct  6 02:37:17 2021
+
+end time >>> Wed Oct  6 02:37:17 2021
+
+end time >>> Wed Oct  6 02:37:17 2021
+
+end time >>> Wed Oct  6 02:37:17 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 11.999475479125977
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:37:18 2021
+
+begin time >>> Wed Oct  6 02:37:18 2021
+
+begin time >>> Wed Oct  6 02:37:18 2021
+
+begin time >>> Wed Oct  6 02:37:18 2021
+
+begin time >>> Wed Oct  6 02:37:18 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/AD2.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6155534822457605
+----------------------------------------
+
+end time >>> Wed Oct  6 02:37:30 2021
+
+end time >>> Wed Oct  6 02:37:30 2021
+
+end time >>> Wed Oct  6 02:37:30 2021
+
+end time >>> Wed Oct  6 02:37:30 2021
+
+end time >>> Wed Oct  6 02:37:30 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 11.90071725845337
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:37:31 2021
+
+begin time >>> Wed Oct  6 02:37:31 2021
+
+begin time >>> Wed Oct  6 02:37:31 2021
+
+begin time >>> Wed Oct  6 02:37:31 2021
+
+begin time >>> Wed Oct  6 02:37:31 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/AD2.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6276549036825642
+----------------------------------------
+
+end time >>> Wed Oct  6 02:37:41 2021
+
+end time >>> Wed Oct  6 02:37:41 2021
+
+end time >>> Wed Oct  6 02:37:41 2021
+
+end time >>> Wed Oct  6 02:37:41 2021
+
+end time >>> Wed Oct  6 02:37:41 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 9.925877809524536
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:37:42 2021
+
+begin time >>> Wed Oct  6 02:37:42 2021
+
+begin time >>> Wed Oct  6 02:37:42 2021
+
+begin time >>> Wed Oct  6 02:37:42 2021
+
+begin time >>> Wed Oct  6 02:37:42 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/AD2.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.5946709840294166
+----------------------------------------
+
+end time >>> Wed Oct  6 02:37:54 2021
+
+end time >>> Wed Oct  6 02:37:54 2021
+
+end time >>> Wed Oct  6 02:37:54 2021
+
+end time >>> Wed Oct  6 02:37:54 2021
+
+end time >>> Wed Oct  6 02:37:54 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 11.560315608978271
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:37:55 2021
+
+begin time >>> Wed Oct  6 02:37:55 2021
+
+begin time >>> Wed Oct  6 02:37:55 2021
+
+begin time >>> Wed Oct  6 02:37:55 2021
+
+begin time >>> Wed Oct  6 02:37:55 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = AD2.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/AD2.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.5979776082542121
+----------------------------------------
+
+end time >>> Wed Oct  6 02:38:06 2021
+
+end time >>> Wed Oct  6 02:38:06 2021
+
+end time >>> Wed Oct  6 02:38:06 2021
+
+end time >>> Wed Oct  6 02:38:06 2021
+
+end time >>> Wed Oct  6 02:38:06 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 11.719619750976562
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:38:07 2021
+
+begin time >>> Wed Oct  6 02:38:07 2021
+
+begin time >>> Wed Oct  6 02:38:07 2021
+
+begin time >>> Wed Oct  6 02:38:07 2021
+
+begin time >>> Wed Oct  6 02:38:07 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+GM.pp
+########################################
+
+Found 558 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7096709960046763, 1: 0.7096709960046763}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7096709960046763
+----------------------------------------
+
+end time >>> Wed Oct  6 02:38:19 2021
+
+end time >>> Wed Oct  6 02:38:19 2021
+
+end time >>> Wed Oct  6 02:38:19 2021
+
+end time >>> Wed Oct  6 02:38:19 2021
+
+end time >>> Wed Oct  6 02:38:19 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 12.044155359268188
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:38:20 2021
+
+begin time >>> Wed Oct  6 02:38:20 2021
+
+begin time >>> Wed Oct  6 02:38:20 2021
+
+begin time >>> Wed Oct  6 02:38:20 2021
+
+begin time >>> Wed Oct  6 02:38:20 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 558 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 558 images belonging to 2 classes.
+Found 558 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.7333538880538534
+----------------------------------------
+
+end time >>> Wed Oct  6 02:38:33 2021
+
+end time >>> Wed Oct  6 02:38:33 2021
+
+end time >>> Wed Oct  6 02:38:33 2021
+
+end time >>> Wed Oct  6 02:38:33 2021
+
+end time >>> Wed Oct  6 02:38:33 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 12.937242269515991
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:38:34 2021
+
+begin time >>> Wed Oct  6 02:38:34 2021
+
+begin time >>> Wed Oct  6 02:38:34 2021
+
+begin time >>> Wed Oct  6 02:38:34 2021
+
+begin time >>> Wed Oct  6 02:38:34 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+GM.pp
+########################################
+
+Found 558 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7808802559062704, 1: 0.7808866792564328}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7808866792564328
+----------------------------------------
+
+end time >>> Wed Oct  6 02:38:46 2021
+
+end time >>> Wed Oct  6 02:38:46 2021
+
+end time >>> Wed Oct  6 02:38:46 2021
+
+end time >>> Wed Oct  6 02:38:46 2021
+
+end time >>> Wed Oct  6 02:38:46 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 11.982915878295898
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:38:47 2021
+
+begin time >>> Wed Oct  6 02:38:47 2021
+
+begin time >>> Wed Oct  6 02:38:47 2021
+
+begin time >>> Wed Oct  6 02:38:47 2021
+
+begin time >>> Wed Oct  6 02:38:47 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+GM.pp
+########################################
+
+Found 558 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7574992613147313, 1: 0.7575185313652189}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7575185313652189
+----------------------------------------
+
+end time >>> Wed Oct  6 02:38:57 2021
+
+end time >>> Wed Oct  6 02:38:57 2021
+
+end time >>> Wed Oct  6 02:38:57 2021
+
+end time >>> Wed Oct  6 02:38:57 2021
+
+end time >>> Wed Oct  6 02:38:57 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 10.499860048294067
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:38:58 2021
+
+begin time >>> Wed Oct  6 02:38:58 2021
+
+begin time >>> Wed Oct  6 02:38:58 2021
+
+begin time >>> Wed Oct  6 02:38:58 2021
+
+begin time >>> Wed Oct  6 02:38:58 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+GM.pp
+########################################
+
+Found 558 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6192238023663622, 1: 0.6192238023663622}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6192238023663622
+----------------------------------------
+
+end time >>> Wed Oct  6 02:39:11 2021
+
+end time >>> Wed Oct  6 02:39:11 2021
+
+end time >>> Wed Oct  6 02:39:11 2021
+
+end time >>> Wed Oct  6 02:39:11 2021
+
+end time >>> Wed Oct  6 02:39:11 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 12.631962299346924
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:39:12 2021
+
+begin time >>> Wed Oct  6 02:39:12 2021
+
+begin time >>> Wed Oct  6 02:39:12 2021
+
+begin time >>> Wed Oct  6 02:39:12 2021
+
+begin time >>> Wed Oct  6 02:39:12 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/GM.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7214696435971819
+----------------------------------------
+
+end time >>> Wed Oct  6 02:39:24 2021
+
+end time >>> Wed Oct  6 02:39:24 2021
+
+end time >>> Wed Oct  6 02:39:24 2021
+
+end time >>> Wed Oct  6 02:39:24 2021
+
+end time >>> Wed Oct  6 02:39:24 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 12.02360224723816
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:39:25 2021
+
+begin time >>> Wed Oct  6 02:39:25 2021
+
+begin time >>> Wed Oct  6 02:39:25 2021
+
+begin time >>> Wed Oct  6 02:39:25 2021
+
+begin time >>> Wed Oct  6 02:39:25 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/GM.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7009428097803564
+----------------------------------------
+
+end time >>> Wed Oct  6 02:39:37 2021
+
+end time >>> Wed Oct  6 02:39:37 2021
+
+end time >>> Wed Oct  6 02:39:37 2021
+
+end time >>> Wed Oct  6 02:39:37 2021
+
+end time >>> Wed Oct  6 02:39:37 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 11.895785808563232
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:39:38 2021
+
+begin time >>> Wed Oct  6 02:39:38 2021
+
+begin time >>> Wed Oct  6 02:39:38 2021
+
+begin time >>> Wed Oct  6 02:39:38 2021
+
+begin time >>> Wed Oct  6 02:39:38 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/GM.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7057475134687112
+----------------------------------------
+
+end time >>> Wed Oct  6 02:39:48 2021
+
+end time >>> Wed Oct  6 02:39:48 2021
+
+end time >>> Wed Oct  6 02:39:48 2021
+
+end time >>> Wed Oct  6 02:39:48 2021
+
+end time >>> Wed Oct  6 02:39:48 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 10.371613025665283
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:39:49 2021
+
+begin time >>> Wed Oct  6 02:39:49 2021
+
+begin time >>> Wed Oct  6 02:39:49 2021
+
+begin time >>> Wed Oct  6 02:39:49 2021
+
+begin time >>> Wed Oct  6 02:39:49 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/GM.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7323352673021135
+----------------------------------------
+
+end time >>> Wed Oct  6 02:40:01 2021
+
+end time >>> Wed Oct  6 02:40:01 2021
+
+end time >>> Wed Oct  6 02:40:01 2021
+
+end time >>> Wed Oct  6 02:40:01 2021
+
+end time >>> Wed Oct  6 02:40:01 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 11.86637544631958
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:40:02 2021
+
+begin time >>> Wed Oct  6 02:40:02 2021
+
+begin time >>> Wed Oct  6 02:40:02 2021
+
+begin time >>> Wed Oct  6 02:40:02 2021
+
+begin time >>> Wed Oct  6 02:40:02 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = GM.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/GM.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7085578118524658
+----------------------------------------
+
+end time >>> Wed Oct  6 02:40:14 2021
+
+end time >>> Wed Oct  6 02:40:14 2021
+
+end time >>> Wed Oct  6 02:40:14 2021
+
+end time >>> Wed Oct  6 02:40:14 2021
+
+end time >>> Wed Oct  6 02:40:14 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 11.896210193634033
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:40:15 2021
+
+begin time >>> Wed Oct  6 02:40:15 2021
+
+begin time >>> Wed Oct  6 02:40:15 2021
+
+begin time >>> Wed Oct  6 02:40:15 2021
+
+begin time >>> Wed Oct  6 02:40:15 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+SX.pp
+########################################
+
+Found 850 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6956761245674741, 1: 0.6951667820069204}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6951667820069204
+----------------------------------------
+
+end time >>> Wed Oct  6 02:40:28 2021
+
+end time >>> Wed Oct  6 02:40:28 2021
+
+end time >>> Wed Oct  6 02:40:28 2021
+
+end time >>> Wed Oct  6 02:40:28 2021
+
+end time >>> Wed Oct  6 02:40:28 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 13.051745653152466
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:40:29 2021
+
+begin time >>> Wed Oct  6 02:40:29 2021
+
+begin time >>> Wed Oct  6 02:40:29 2021
+
+begin time >>> Wed Oct  6 02:40:29 2021
+
+begin time >>> Wed Oct  6 02:40:29 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 850 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 850 images belonging to 2 classes.
+Found 850 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.7066380622837369
+----------------------------------------
+
+end time >>> Wed Oct  6 02:40:42 2021
+
+end time >>> Wed Oct  6 02:40:42 2021
+
+end time >>> Wed Oct  6 02:40:42 2021
+
+end time >>> Wed Oct  6 02:40:42 2021
+
+end time >>> Wed Oct  6 02:40:42 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 13.154874563217163
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:40:44 2021
+
+begin time >>> Wed Oct  6 02:40:44 2021
+
+begin time >>> Wed Oct  6 02:40:44 2021
+
+begin time >>> Wed Oct  6 02:40:44 2021
+
+begin time >>> Wed Oct  6 02:40:44 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+SX.pp
+########################################
+
+Found 850 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7451792387543252, 1: 0.7451847750865053}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7451847750865053
+----------------------------------------
+
+end time >>> Wed Oct  6 02:40:55 2021
+
+end time >>> Wed Oct  6 02:40:55 2021
+
+end time >>> Wed Oct  6 02:40:55 2021
+
+end time >>> Wed Oct  6 02:40:55 2021
+
+end time >>> Wed Oct  6 02:40:55 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 11.34440302848816
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:40:55 2021
+
+begin time >>> Wed Oct  6 02:40:55 2021
+
+begin time >>> Wed Oct  6 02:40:55 2021
+
+begin time >>> Wed Oct  6 02:40:55 2021
+
+begin time >>> Wed Oct  6 02:40:55 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+SX.pp
+########################################
+
+Found 850 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7280692041522491, 1: 0.7281051903114187}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7281051903114187
+----------------------------------------
+
+end time >>> Wed Oct  6 02:41:06 2021
+
+end time >>> Wed Oct  6 02:41:06 2021
+
+end time >>> Wed Oct  6 02:41:06 2021
+
+end time >>> Wed Oct  6 02:41:06 2021
+
+end time >>> Wed Oct  6 02:41:06 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 10.641513347625732
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:41:07 2021
+
+begin time >>> Wed Oct  6 02:41:07 2021
+
+begin time >>> Wed Oct  6 02:41:07 2021
+
+begin time >>> Wed Oct  6 02:41:07 2021
+
+begin time >>> Wed Oct  6 02:41:07 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+SX.pp
+########################################
+
+Found 850 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6407750865051902, 1: 0.6407750865051903}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6407750865051903
+----------------------------------------
+
+end time >>> Wed Oct  6 02:41:20 2021
+
+end time >>> Wed Oct  6 02:41:20 2021
+
+end time >>> Wed Oct  6 02:41:20 2021
+
+end time >>> Wed Oct  6 02:41:20 2021
+
+end time >>> Wed Oct  6 02:41:20 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 13.169002771377563
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:41:21 2021
+
+begin time >>> Wed Oct  6 02:41:21 2021
+
+begin time >>> Wed Oct  6 02:41:21 2021
+
+begin time >>> Wed Oct  6 02:41:21 2021
+
+begin time >>> Wed Oct  6 02:41:21 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/SX.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7019504930212987
+----------------------------------------
+
+end time >>> Wed Oct  6 02:41:33 2021
+
+end time >>> Wed Oct  6 02:41:33 2021
+
+end time >>> Wed Oct  6 02:41:33 2021
+
+end time >>> Wed Oct  6 02:41:33 2021
+
+end time >>> Wed Oct  6 02:41:33 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 12.123887538909912
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:41:34 2021
+
+begin time >>> Wed Oct  6 02:41:34 2021
+
+begin time >>> Wed Oct  6 02:41:34 2021
+
+begin time >>> Wed Oct  6 02:41:34 2021
+
+begin time >>> Wed Oct  6 02:41:34 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/SX.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.6935572275649011
+----------------------------------------
+
+end time >>> Wed Oct  6 02:41:47 2021
+
+end time >>> Wed Oct  6 02:41:47 2021
+
+end time >>> Wed Oct  6 02:41:47 2021
+
+end time >>> Wed Oct  6 02:41:47 2021
+
+end time >>> Wed Oct  6 02:41:47 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 12.527177572250366
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:41:48 2021
+
+begin time >>> Wed Oct  6 02:41:48 2021
+
+begin time >>> Wed Oct  6 02:41:48 2021
+
+begin time >>> Wed Oct  6 02:41:48 2021
+
+begin time >>> Wed Oct  6 02:41:48 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/SX.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7034951639067439
+----------------------------------------
+
+end time >>> Wed Oct  6 02:41:59 2021
+
+end time >>> Wed Oct  6 02:41:59 2021
+
+end time >>> Wed Oct  6 02:41:59 2021
+
+end time >>> Wed Oct  6 02:41:59 2021
+
+end time >>> Wed Oct  6 02:41:59 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 11.05062222480774
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:42:00 2021
+
+begin time >>> Wed Oct  6 02:42:00 2021
+
+begin time >>> Wed Oct  6 02:42:00 2021
+
+begin time >>> Wed Oct  6 02:42:00 2021
+
+begin time >>> Wed Oct  6 02:42:00 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/SX.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.731188510749027
+----------------------------------------
+
+end time >>> Wed Oct  6 02:42:12 2021
+
+end time >>> Wed Oct  6 02:42:12 2021
+
+end time >>> Wed Oct  6 02:42:12 2021
+
+end time >>> Wed Oct  6 02:42:12 2021
+
+end time >>> Wed Oct  6 02:42:12 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 12.347000122070312
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:42:13 2021
+
+begin time >>> Wed Oct  6 02:42:13 2021
+
+begin time >>> Wed Oct  6 02:42:13 2021
+
+begin time >>> Wed Oct  6 02:42:13 2021
+
+begin time >>> Wed Oct  6 02:42:13 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = SX.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/SX.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7127576527646287
+----------------------------------------
+
+end time >>> Wed Oct  6 02:42:26 2021
+
+end time >>> Wed Oct  6 02:42:26 2021
+
+end time >>> Wed Oct  6 02:42:26 2021
+
+end time >>> Wed Oct  6 02:42:26 2021
+
+end time >>> Wed Oct  6 02:42:26 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 12.654449939727783
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:42:27 2021
+
+begin time >>> Wed Oct  6 02:42:27 2021
+
+begin time >>> Wed Oct  6 02:42:27 2021
+
+begin time >>> Wed Oct  6 02:42:27 2021
+
+begin time >>> Wed Oct  6 02:42:27 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_cnn_one_branch
+########################################
+
+########################################
+target_name
+X5628FC.pp
+########################################
+
+Found 902 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_one_branch.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6974400322515621, 1: 0.6971008008810183}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6971008008810183
+----------------------------------------
+
+end time >>> Wed Oct  6 02:42:40 2021
+
+end time >>> Wed Oct  6 02:42:40 2021
+
+end time >>> Wed Oct  6 02:42:40 2021
+
+end time >>> Wed Oct  6 02:42:40 2021
+
+end time >>> Wed Oct  6 02:42:40 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_one_branch
+time used = 13.245125770568848
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:42:41 2021
+
+begin time >>> Wed Oct  6 02:42:41 2021
+
+begin time >>> Wed Oct  6 02:42:41 2021
+
+begin time >>> Wed Oct  6 02:42:41 2021
+
+begin time >>> Wed Oct  6 02:42:41 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+Found 902 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_cnn_two_branch.h5
+========================================
+
+Found 902 images belonging to 2 classes.
+Found 902 images belonging to 2 classes.
+----------------------------------------
+roc_auc[1]
+0.6852227865153072
+----------------------------------------
+
+end time >>> Wed Oct  6 02:42:55 2021
+
+end time >>> Wed Oct  6 02:42:55 2021
+
+end time >>> Wed Oct  6 02:42:55 2021
+
+end time >>> Wed Oct  6 02:42:55 2021
+
+end time >>> Wed Oct  6 02:42:55 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_cnn_two_branch
+time used = 13.583778858184814
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:42:56 2021
+
+begin time >>> Wed Oct  6 02:42:56 2021
+
+begin time >>> Wed Oct  6 02:42:56 2021
+
+begin time >>> Wed Oct  6 02:42:56 2021
+
+begin time >>> Wed Oct  6 02:42:56 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_dense
+########################################
+
+########################################
+target_name
+X5628FC.pp
+########################################
+
+Found 902 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7225996922335681, 1: 0.7226021504319055}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7226021504319055
+----------------------------------------
+
+end time >>> Wed Oct  6 02:43:08 2021
+
+end time >>> Wed Oct  6 02:43:08 2021
+
+end time >>> Wed Oct  6 02:43:08 2021
+
+end time >>> Wed Oct  6 02:43:08 2021
+
+end time >>> Wed Oct  6 02:43:08 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_dense
+time used = 12.03464674949646
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:43:08 2021
+
+begin time >>> Wed Oct  6 02:43:08 2021
+
+begin time >>> Wed Oct  6 02:43:08 2021
+
+begin time >>> Wed Oct  6 02:43:08 2021
+
+begin time >>> Wed Oct  6 02:43:08 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_dense
+########################################
+
+########################################
+target_name
+X5628FC.pp
+########################################
+
+Found 902 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_dense.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.7028972325603118, 1: 0.7028652759819274}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.7028652759819274
+----------------------------------------
+
+end time >>> Wed Oct  6 02:43:19 2021
+
+end time >>> Wed Oct  6 02:43:19 2021
+
+end time >>> Wed Oct  6 02:43:19 2021
+
+end time >>> Wed Oct  6 02:43:19 2021
+
+end time >>> Wed Oct  6 02:43:19 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_dense
+time used = 11.000223398208618
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:43:20 2021
+
+begin time >>> Wed Oct  6 02:43:20 2021
+
+begin time >>> Wed Oct  6 02:43:20 2021
+
+begin time >>> Wed Oct  6 02:43:20 2021
+
+begin time >>> Wed Oct  6 02:43:20 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_resnet18
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_resnet18
+########################################
+
+########################################
+target_name
+X5628FC.pp
+########################################
+
+Found 902 images belonging to 2 classes.
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_resnet18.h5
+========================================
+
+########################################
+n_classes
+2
+########################################
+
+########################################
+roc_auc
+{0: 0.6645493384988276, 1: 0.6645493384988275}
+########################################
+
+----------------------------------------
+roc_auc[1]
+0.6645493384988275
+----------------------------------------
+
+end time >>> Wed Oct  6 02:43:34 2021
+
+end time >>> Wed Oct  6 02:43:34 2021
+
+end time >>> Wed Oct  6 02:43:34 2021
+
+end time >>> Wed Oct  6 02:43:34 2021
+
+end time >>> Wed Oct  6 02:43:34 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_resnet18
+time used = 13.540751218795776
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:43:35 2021
+
+begin time >>> Wed Oct  6 02:43:35 2021
+
+begin time >>> Wed Oct  6 02:43:35 2021
+
+begin time >>> Wed Oct  6 02:43:35 2021
+
+begin time >>> Wed Oct  6 02:43:35 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/X5628FC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7032270759543487
+----------------------------------------
+
+end time >>> Wed Oct  6 02:43:46 2021
+
+end time >>> Wed Oct  6 02:43:46 2021
+
+end time >>> Wed Oct  6 02:43:46 2021
+
+end time >>> Wed Oct  6 02:43:46 2021
+
+end time >>> Wed Oct  6 02:43:46 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_one_branch
+time used = 11.67112398147583
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:43:47 2021
+
+begin time >>> Wed Oct  6 02:43:47 2021
+
+begin time >>> Wed Oct  6 02:43:47 2021
+
+begin time >>> Wed Oct  6 02:43:47 2021
+
+begin time >>> Wed Oct  6 02:43:47 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/X5628FC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7068083431719795
+----------------------------------------
+
+end time >>> Wed Oct  6 02:43:59 2021
+
+end time >>> Wed Oct  6 02:43:59 2021
+
+end time >>> Wed Oct  6 02:43:59 2021
+
+end time >>> Wed Oct  6 02:43:59 2021
+
+end time >>> Wed Oct  6 02:43:59 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_cnn_two_branch
+time used = 11.854005813598633
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:44:00 2021
+
+begin time >>> Wed Oct  6 02:44:00 2021
+
+begin time >>> Wed Oct  6 02:44:00 2021
+
+begin time >>> Wed Oct  6 02:44:00 2021
+
+begin time >>> Wed Oct  6 02:44:00 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = embedding_dense
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+embedding_dense
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/embedding_dense.h5
+========================================
+
+========================================
+Loading npz
+data/X5628FC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7054063360881542
+----------------------------------------
+
+end time >>> Wed Oct  6 02:44:11 2021
+
+end time >>> Wed Oct  6 02:44:11 2021
+
+end time >>> Wed Oct  6 02:44:11 2021
+
+end time >>> Wed Oct  6 02:44:11 2021
+
+end time >>> Wed Oct  6 02:44:11 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = embedding_dense
+time used = 11.143171548843384
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:44:12 2021
+
+begin time >>> Wed Oct  6 02:44:12 2021
+
+begin time >>> Wed Oct  6 02:44:12 2021
+
+begin time >>> Wed Oct  6 02:44:12 2021
+
+begin time >>> Wed Oct  6 02:44:12 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_one_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_one_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_one_branch.h5
+========================================
+
+========================================
+Loading npz
+data/X5628FC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7136068476977567
+----------------------------------------
+
+end time >>> Wed Oct  6 02:44:24 2021
+
+end time >>> Wed Oct  6 02:44:24 2021
+
+end time >>> Wed Oct  6 02:44:24 2021
+
+end time >>> Wed Oct  6 02:44:24 2021
+
+end time >>> Wed Oct  6 02:44:24 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_one_branch
+time used = 11.424869537353516
+
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Wed Oct  6 02:44:25 2021
+
+begin time >>> Wed Oct  6 02:44:25 2021
+
+begin time >>> Wed Oct  6 02:44:25 2021
+
+begin time >>> Wed Oct  6 02:44:25 2021
+
+begin time >>> Wed Oct  6 02:44:25 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.model = onehot_embedding_cnn_two_branch
+args.type = test
+args.name = GM.pp
+args.length = 10001
+args.object = X5628FC.pp
+===========================
+
+
+-> h5_weights/GM.pp folder already exist. pass.
+-> result/GM.pp/onehot_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_dense folder already exist. pass.
+-> result/GM.pp/onehot_resnet18 folder already exist. pass.
+-> result/GM.pp/onehot_resnet34 folder already exist. pass.
+-> result/GM.pp/embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/embedding_cnn_two_branch folder already exist. pass.
+-> result/GM.pp/embedding_dense folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_one_branch folder already exist. pass.
+-> result/GM.pp/onehot_embedding_cnn_two_branch folder already exist. pass.
+########################################
+gen_name
+GM.pp
+########################################
+
+########################################
+model_name
+onehot_embedding_cnn_two_branch
+########################################
+
+========================================
+Load the model ...
+h5_weights/GM.pp/onehot_embedding_cnn_two_branch.h5
+========================================
+
+========================================
+Loading npz
+data/X5628FC.pp/embedding_test.npz
+========================================
+
+----------------------------------------
+roc_auc[1]
+0.7059573002754821
+----------------------------------------
+
+end time >>> Wed Oct  6 02:44:37 2021
+
+end time >>> Wed Oct  6 02:44:37 2021
+
+end time >>> Wed Oct  6 02:44:37 2021
+
+end time >>> Wed Oct  6 02:44:37 2021
+
+end time >>> Wed Oct  6 02:44:37 2021
+
+
+
+
+
+
+
+
+
+
+
+
+args.model = onehot_embedding_cnn_two_branch
+time used = 11.643945932388306
+
+
