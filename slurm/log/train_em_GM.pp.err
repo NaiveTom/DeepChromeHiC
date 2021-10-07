@@ -1,0 +1,4 @@
+gcc version 6.3.0 unloaded.
+gcc version 9.1.0 loaded.
+openmpi version 4.0.4 loaded.
+Python 3.8.5 with TensorFlow 2.3.0 loaded.
