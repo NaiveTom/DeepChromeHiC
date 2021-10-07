@@ -1,0 +1,298 @@
+gcc version 6.3.0 unloaded.
+gcc version 9.1.0 loaded.
+openmpi version 4.0.4 loaded.
+Python 3.8.5 with TensorFlow 2.3.0 loaded.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 181, in <module>
+    test_cnn_dense_resnet(args.name, args.model, args.object, int(args.length))
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 95, in test_cnn_dense_resnet
+    clf.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/onehot_cnn_one_branch.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 200, in <module>
+    test_embedding(args.name, args.model, args.object)
+  File "/N/slate/bizi/DeepChromeHiC/test.py", line 438, in test_embedding
+    model.load_weights('h5_weights/'+gen_name+'/'+model_name+'.h5')
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 2204, in load_weights
+    with h5py.File(filepath, 'r') as f:
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 406, in __init__
+    fid = make_fid(name, mode, userblock_size,
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/h5py/_hl/files.py", line 173, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 88, in h5py.h5f.open
+OSError: Unable to open file (unable to open file: name = 'h5_weights/AD2.pp/embedding_dense.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)

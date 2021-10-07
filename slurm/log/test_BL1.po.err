@@ -1,0 +1,201 @@
+gcc version 6.3.0 unloaded.
+gcc version 9.1.0 loaded.
+openmpi version 4.0.4 loaded.
+Python 3.8.5 with TensorFlow 2.3.0 loaded.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/site-packages/scipy/stats/stats.py:3508: PearsonRConstantInputWarning: An input array is constant; the correlation coefficent is not defined.
+  warnings.warn(PearsonRConstantInputWarning())
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:296: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.
+WARNING:tensorflow:From /N/slate/bizi/DeepChromeHiC/test.py:112: Model.predict_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.predict, which supports generators.

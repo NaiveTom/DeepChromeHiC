@@ -1,0 +1,199 @@
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Sat Oct  2 00:32:29 2021
+
+begin time >>> Sat Oct  2 00:32:29 2021
+
+begin time >>> Sat Oct  2 00:32:29 2021
+
+begin time >>> Sat Oct  2 00:32:29 2021
+
+begin time >>> Sat Oct  2 00:32:29 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.preprocessing = true
+args.name = AO.po
+===========================
+
+AO.po
+
+-> make new folder: data/AO.po/png_train/0
+-> make new folder: data/AO.po/png_train/1
+-> make new folder: data/AO.po/png_test/0
+-> make new folder: data/AO.po/png_test/1
+-> make new folder: data/AO.po/train_en/0
+-> make new folder: data/AO.po/train_en/1
+-> make new folder: data/AO.po/train_pr/0
+-> make new folder: data/AO.po/train_pr/1
+-> make new folder: data/AO.po/test_en/0
+-> make new folder: data/AO.po/test_en/1
+-> make new folder: data/AO.po/test_pr/0
+-> make new folder: data/AO.po/test_pr/1
+-> processing png...
+
+========================================
+anchor1_pos.shape
+(3232,)
+========================================
+
+========================================
+anchor1_neg2.shape
+(3232,)
+========================================
+
+========================================
+anchor2_pos.shape
+(3232,)
+========================================
+
+========================================
+anchor2_neg2.shape
+(3232,)
+========================================
+
+----------------------------------------
+anchor1_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 2908
+len(test_set) 324
+----------------------------------------
+
+----------------------------------------
+anchor1_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 2908
+len(test_set) 324
+----------------------------------------
+
+----------------------------------------
+anchor2_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 2908
+len(test_set) 324
+----------------------------------------
+
+----------------------------------------
+anchor2_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 2908
+len(test_set) 324
+----------------------------------------
+
+########################################
+one-hot enconding
+[ [A], [C], [G], [T], [N] ]
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+########################################
+
+
+>>> Sat Oct  2 00:33:00 2021
+
+The training set and labels are being stored in blocks, block number = 0 / 2
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 00:40:30 2021
+
+The training set and labels are being stored in blocks, block number = 1 / 2
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 00:47:56 2021
+
+The training set and labels are being stored in blocks, block number = 2 / 2
+Merged block size (908, 5, 20002)
+PNG is being generated...
+
+
+
+>>> Sat Oct  2 00:54:45 2021
+
+Writing test set and tags to png ...
+Merged block size (324, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 00:57:09 2021
+
+
+
+-> png processed successfully!
+
+-> processing npz...
+
+Loading anchor1 ...
+anchor1 finished ...
+
+Loading anchor2 ...
+anchor2 finished ...
+
+train enconding ...
+test enconding ...
+
+writing data into .npz ...
+
+-> npz processed successfully!
+
+
+
+
+
+
+
+
+
+
+
+end time >>> Sat Oct  2 00:59:04 2021
+
+end time >>> Sat Oct  2 00:59:04 2021
+
+end time >>> Sat Oct  2 00:59:04 2021
+
+end time >>> Sat Oct  2 00:59:04 2021
+
+end time >>> Sat Oct  2 00:59:04 2021
+
+
+
+
+
+
+
+
+
+
+
+
+time used = 1595.350605249405
+
+

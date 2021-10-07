@@ -1,0 +1,217 @@
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Sat Oct  2 18:28:32 2021
+
+begin time >>> Sat Oct  2 18:28:32 2021
+
+begin time >>> Sat Oct  2 18:28:32 2021
+
+begin time >>> Sat Oct  2 18:28:32 2021
+
+begin time >>> Sat Oct  2 18:28:32 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.preprocessing = true
+args.name = TH1.po
+===========================
+
+TH1.po
+
+-> make new folder: data/TH1.po/png_train/0
+-> make new folder: data/TH1.po/png_train/1
+-> make new folder: data/TH1.po/png_test/0
+-> make new folder: data/TH1.po/png_test/1
+-> make new folder: data/TH1.po/train_en/0
+-> make new folder: data/TH1.po/train_en/1
+-> make new folder: data/TH1.po/train_pr/0
+-> make new folder: data/TH1.po/train_pr/1
+-> make new folder: data/TH1.po/test_en/0
+-> make new folder: data/TH1.po/test_en/1
+-> make new folder: data/TH1.po/test_pr/0
+-> make new folder: data/TH1.po/test_pr/1
+-> processing png...
+
+========================================
+anchor1_pos.shape
+(5758,)
+========================================
+
+========================================
+anchor1_neg2.shape
+(5758,)
+========================================
+
+========================================
+anchor2_pos.shape
+(5758,)
+========================================
+
+========================================
+anchor2_neg2.shape
+(5758,)
+========================================
+
+----------------------------------------
+anchor1_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 5182
+len(test_set) 576
+----------------------------------------
+
+----------------------------------------
+anchor1_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 5182
+len(test_set) 576
+----------------------------------------
+
+----------------------------------------
+anchor2_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 5182
+len(test_set) 576
+----------------------------------------
+
+----------------------------------------
+anchor2_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 5182
+len(test_set) 576
+----------------------------------------
+
+########################################
+one-hot enconding
+[ [A], [C], [G], [T], [N] ]
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+########################################
+
+
+>>> Sat Oct  2 18:29:37 2021
+
+The training set and labels are being stored in blocks, block number = 0 / 5
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 18:37:48 2021
+
+The training set and labels are being stored in blocks, block number = 1 / 5
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 18:45:51 2021
+
+The training set and labels are being stored in blocks, block number = 2 / 5
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 18:54:00 2021
+
+The training set and labels are being stored in blocks, block number = 3 / 5
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 19:02:07 2021
+
+The training set and labels are being stored in blocks, block number = 4 / 5
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 19:10:09 2021
+
+The training set and labels are being stored in blocks, block number = 5 / 5
+Merged block size (182, 5, 20002)
+PNG is being generated...
+
+
+
+>>> Sat Oct  2 19:11:38 2021
+
+Writing test set and tags to png ...
+Merged block size (576, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 19:16:18 2021
+
+
+
+-> png processed successfully!
+
+-> processing npz...
+
+Loading anchor1 ...
+anchor1 finished ...
+
+Loading anchor2 ...
+anchor2 finished ...
+
+train enconding ...
+test enconding ...
+
+writing data into .npz ...
+
+-> npz processed successfully!
+
+
+
+
+
+
+
+
+
+
+
+end time >>> Sat Oct  2 19:20:07 2021
+
+end time >>> Sat Oct  2 19:20:07 2021
+
+end time >>> Sat Oct  2 19:20:07 2021
+
+end time >>> Sat Oct  2 19:20:07 2021
+
+end time >>> Sat Oct  2 19:20:07 2021
+
+
+
+
+
+
+
+
+
+
+
+
+time used = 3095.2153747081757
+
+

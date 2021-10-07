@@ -1,0 +1,211 @@
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Sat Oct  2 00:59:08 2021
+
+begin time >>> Sat Oct  2 00:59:08 2021
+
+begin time >>> Sat Oct  2 00:59:08 2021
+
+begin time >>> Sat Oct  2 00:59:08 2021
+
+begin time >>> Sat Oct  2 00:59:08 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.preprocessing = true
+args.name = CM.po
+===========================
+
+CM.po
+
+-> make new folder: data/CM.po/png_train/0
+-> make new folder: data/CM.po/png_train/1
+-> make new folder: data/CM.po/png_test/0
+-> make new folder: data/CM.po/png_test/1
+-> make new folder: data/CM.po/train_en/0
+-> make new folder: data/CM.po/train_en/1
+-> make new folder: data/CM.po/train_pr/0
+-> make new folder: data/CM.po/train_pr/1
+-> make new folder: data/CM.po/test_en/0
+-> make new folder: data/CM.po/test_en/1
+-> make new folder: data/CM.po/test_pr/0
+-> make new folder: data/CM.po/test_pr/1
+-> processing png...
+
+========================================
+anchor1_pos.shape
+(4598,)
+========================================
+
+========================================
+anchor1_neg2.shape
+(4598,)
+========================================
+
+========================================
+anchor2_pos.shape
+(4598,)
+========================================
+
+========================================
+anchor2_neg2.shape
+(4598,)
+========================================
+
+----------------------------------------
+anchor1_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 4138
+len(test_set) 460
+----------------------------------------
+
+----------------------------------------
+anchor1_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 4138
+len(test_set) 460
+----------------------------------------
+
+----------------------------------------
+anchor2_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 4138
+len(test_set) 460
+----------------------------------------
+
+----------------------------------------
+anchor2_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 4138
+len(test_set) 460
+----------------------------------------
+
+########################################
+one-hot enconding
+[ [A], [C], [G], [T], [N] ]
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+########################################
+
+
+>>> Sat Oct  2 00:59:51 2021
+
+The training set and labels are being stored in blocks, block number = 0 / 4
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 01:07:17 2021
+
+The training set and labels are being stored in blocks, block number = 1 / 4
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 01:14:45 2021
+
+The training set and labels are being stored in blocks, block number = 2 / 4
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 01:22:14 2021
+
+The training set and labels are being stored in blocks, block number = 3 / 4
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 01:29:41 2021
+
+The training set and labels are being stored in blocks, block number = 4 / 4
+Merged block size (138, 5, 20002)
+PNG is being generated...
+
+
+
+>>> Sat Oct  2 01:30:43 2021
+
+Writing test set and tags to png ...
+Merged block size (460, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 01:34:07 2021
+
+
+
+-> png processed successfully!
+
+-> processing npz...
+
+Loading anchor1 ...
+anchor1 finished ...
+
+Loading anchor2 ...
+anchor2 finished ...
+
+train enconding ...
+test enconding ...
+
+writing data into .npz ...
+
+-> npz processed successfully!
+
+
+
+
+
+
+
+
+
+
+
+end time >>> Sat Oct  2 01:36:52 2021
+
+end time >>> Sat Oct  2 01:36:52 2021
+
+end time >>> Sat Oct  2 01:36:52 2021
+
+end time >>> Sat Oct  2 01:36:52 2021
+
+end time >>> Sat Oct  2 01:36:52 2021
+
+
+
+
+
+
+
+
+
+
+
+
+time used = 2264.0506312847137
+
+

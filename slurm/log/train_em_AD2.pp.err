@@ -1,0 +1,12 @@
+gcc version 6.3.0 unloaded.
+gcc version 9.1.0 loaded.
+openmpi version 4.0.4 loaded.
+Python 3.8.5 with TensorFlow 2.3.0 loaded.
+Traceback (most recent call last):
+  File "DeepChromeHiC.py", line 155, in <module>
+    mkdir('h5_weights/' + args.name) # 只需要基因名称就行了
+  File "DeepChromeHiC.py", line 146, in mkdir
+    os.makedirs(path) # makedirs 创建文件时如果路径不存在会创建这个路径
+  File "/N/soft/rhel7/deeplearning/Python-3.8.5/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: 'h5_weights/AD2.pp'

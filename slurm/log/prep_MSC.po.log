@@ -1,0 +1,241 @@
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin time >>> Sat Oct  2 03:09:35 2021
+
+begin time >>> Sat Oct  2 03:09:35 2021
+
+begin time >>> Sat Oct  2 03:09:35 2021
+
+begin time >>> Sat Oct  2 03:09:35 2021
+
+begin time >>> Sat Oct  2 03:09:35 2021
+
+
+
+If it is the first time to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p true -n [gene name]
+For example: python3 DeepChromeHiC.py -p true -n AD2.po
+
+
+=== Below is your input ===
+
+args.preprocessing = true
+args.name = MSC.po
+===========================
+
+MSC.po
+
+-> make new folder: data/MSC.po/png_train/0
+-> make new folder: data/MSC.po/png_train/1
+-> make new folder: data/MSC.po/png_test/0
+-> make new folder: data/MSC.po/png_test/1
+-> make new folder: data/MSC.po/train_en/0
+-> make new folder: data/MSC.po/train_en/1
+-> make new folder: data/MSC.po/train_pr/0
+-> make new folder: data/MSC.po/train_pr/1
+-> make new folder: data/MSC.po/test_en/0
+-> make new folder: data/MSC.po/test_en/1
+-> make new folder: data/MSC.po/test_pr/0
+-> make new folder: data/MSC.po/test_pr/1
+-> processing png...
+
+========================================
+anchor1_pos.shape
+(11030,)
+========================================
+
+========================================
+anchor1_neg2.shape
+(11030,)
+========================================
+
+========================================
+anchor2_pos.shape
+(11030,)
+========================================
+
+========================================
+anchor2_neg2.shape
+(11030,)
+========================================
+
+----------------------------------------
+anchor1_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 9927
+len(test_set) 1103
+----------------------------------------
+
+----------------------------------------
+anchor1_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 9927
+len(test_set) 1103
+----------------------------------------
+
+----------------------------------------
+anchor2_pos
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 9927
+len(test_set) 1103
+----------------------------------------
+
+----------------------------------------
+anchor2_neg2
+
+train_split_rate 0.9
+test_split_rate 0.09999999999999998
+
+len(train_set) 9927
+len(test_set) 1103
+----------------------------------------
+
+########################################
+one-hot enconding
+[ [A], [C], [G], [T], [N] ]
+[[1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0.]
+ [0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 1.]]
+########################################
+
+
+>>> Sat Oct  2 03:10:11 2021
+
+The training set and labels are being stored in blocks, block number = 0 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:18:05 2021
+
+The training set and labels are being stored in blocks, block number = 1 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:26:00 2021
+
+The training set and labels are being stored in blocks, block number = 2 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:33:56 2021
+
+The training set and labels are being stored in blocks, block number = 3 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:41:52 2021
+
+The training set and labels are being stored in blocks, block number = 4 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:49:50 2021
+
+The training set and labels are being stored in blocks, block number = 5 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 03:57:54 2021
+
+The training set and labels are being stored in blocks, block number = 6 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 04:05:58 2021
+
+The training set and labels are being stored in blocks, block number = 7 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 04:13:59 2021
+
+The training set and labels are being stored in blocks, block number = 8 / 9
+Merged block size (1000, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 04:22:08 2021
+
+The training set and labels are being stored in blocks, block number = 9 / 9
+Merged block size (927, 5, 20002)
+PNG is being generated...
+
+
+
+>>> Sat Oct  2 04:29:41 2021
+
+Writing test set and tags to png ...
+Merged block size (1103, 5, 20002)
+PNG is being generated...
+
+>>> Sat Oct  2 04:38:31 2021
+
+
+
+-> png processed successfully!
+
+-> processing npz...
+
+Loading anchor1 ...
+anchor1 finished ...
+
+Loading anchor2 ...
+anchor2 finished ...
+
+train enconding ...
+test enconding ...
+
+writing data into .npz ...
+
+-> npz processed successfully!
+
+
+
+
+
+
+
+
+
+
+
+end time >>> Sat Oct  2 04:45:43 2021
+
+end time >>> Sat Oct  2 04:45:43 2021
+
+end time >>> Sat Oct  2 04:45:43 2021
+
+end time >>> Sat Oct  2 04:45:43 2021
+
+end time >>> Sat Oct  2 04:45:43 2021
+
+
+
+
+
+
+
+
+
+
+
+
+time used = 5768.025492429733
+
+
