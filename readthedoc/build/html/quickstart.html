@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>DeepChromeHiC Quickstart &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Run on a Supercomputer" href="supercomputer.html" />
+    <link rel="prev" title="Welcome to DeepChromeHiC’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DeepChromeHiC Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-introduction">Module Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#help-page">Help Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-train-and-test-a-new-gene">How to train and test a new gene</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download">Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#copy">Copy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coding-your-gene-fragment">Coding your gene fragment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run">Run!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>DeepChromeHiC Quickstart</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="deepchromehic-quickstart">
+<h1>DeepChromeHiC Quickstart<a class="headerlink" href="#deepchromehic-quickstart" title="Permalink to this headline">¶</a></h1>
+<p>The final trainning &amp; testing model with Friendly Interface.</p>
+<p>This software can be used on both Windows and Linux platforms.</p>
+<div class="section" id="module-introduction">
+<h2>Module Introduction<a class="headerlink" href="#module-introduction" title="Permalink to this headline">¶</a></h2>
+<p>This release includes multiple models:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_cnn_one_branch</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use CNN to process, and finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_cnn_two_branch</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different CNN networks, and then merge the CNN networks to finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_embedding_dense</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, then use the embedding layer to embed the gene fragment, and then send it to multiple dense layers and output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_embedding_cnn_one_branch</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, then use the embedding layer for embedding and then use CNN to process, and finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_embedding_cnn_two_branch</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different embedding layers for embedding and then send to different CNN networks, and then merge the CNN networks to finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_dense</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to multiple dense layers and output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_resnet18</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to The simplified (due to GPU memory usage) and improved resnet18, finally get the output.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_resnet34</span></code></p>
+<blockquote>
+<div><p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to The simplified (due to GPU memory usage) and improved resnet34, finally get the output.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">embedding_cnn_one_branch</span></code></p>
+<blockquote>
+<div><p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use CNN to process, and finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">embedding_cnn_two_branch</span></code></p>
+<blockquote>
+<div><p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different CNN networks, and then merge the CNN networks to finally get the output</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">embedding_dense</span></code></p>
+<blockquote>
+<div><p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use multiple dense layers to process, and finally get the output</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">minimum</span> <span class="pre">memory</span> <span class="pre">size</span></code> is <code class="docutils literal notranslate"><span class="pre">16GB</span></code>. If you are dealing with a large amount of data, you need more memory to prepare the data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Graphics</span> <span class="pre">card</span> <span class="pre">memory</span> <span class="pre">minimum</span></code> is <code class="docutils literal notranslate"><span class="pre">8GB</span></code></p></li>
+<li><p>(Optimal) The graphics card contains <code class="docutils literal notranslate"><span class="pre">cuda</span></code> and <code class="docutils literal notranslate"><span class="pre">copy</span></code> functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">other</span> <span class="pre">programs</span></code> can occupy graphics card resources while running</p></li>
+</ul>
+</div>
+<div class="section" id="help-page">
+<h2>Help Page<a class="headerlink" href="#help-page" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>D:<span class="se">\D</span>eepChromeHiC&gt;python DeepChromeHiC.py -h
+
+************************************
+************************************
+
+    Welcome to use DeepChromeHiC
+
+************************************
+************************************
+
+begin <span class="nb">time</span> &gt;&gt;&gt; Fri Jun <span class="m">18</span> <span class="m">10</span>:31:09 <span class="m">2021</span>
+
+
+
+If it is the first <span class="nb">time</span> to use, please preprocess the data first.
+Use the command: python3 DeepChromeHiC.py -p <span class="nb">true</span> -n <span class="o">[</span>gene name<span class="o">]</span>
+For example: python3 DeepChromeHiC.py -p <span class="nb">true</span> -n AD2.po
+
+usage: DeepChromeHiC.py <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-p PREPROCESSING<span class="o">]</span> <span class="o">[</span>-m MODEL<span class="o">]</span> <span class="o">[</span>-t TYPE<span class="o">]</span> <span class="o">[</span>-n NAME<span class="o">]</span>
+
+optional arguments:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  -p PREPROCESSING, --preprocessing PREPROCESSING
+                                                Preprocess the data, <span class="k">if</span> you enter <span class="o">[</span>true<span class="o">]</span> <span class="o">(</span><span class="k">case</span> sensitive<span class="o">)</span>, <span class="k">then</span> proceed, <span class="k">if</span> no, pass this
+                                                process. Note: This <span class="nb">command</span> only needs to be entered once.
+  -m MODEL, --model MODEL
+                                                Enter the model name which your choose: <span class="o">[</span>onehot_cnn_one_branch<span class="o">]</span> / <span class="o">[</span>onehot_cnn_two_branch<span class="o">]</span> /
+                                                <span class="o">[</span>onehot_embedding_dense<span class="o">]</span> / <span class="o">[</span>onehot_embedding_cnn_one_branch<span class="o">]</span> /
+                                                <span class="o">[</span>onehot_embedding_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>onehot_dense<span class="o">]</span> / <span class="o">[</span>onehot_resnet18<span class="o">]</span> / <span class="o">[</span>onehot_resnet34<span class="o">]</span> /
+                                                <span class="o">[</span>embedding_cnn_one_branch<span class="o">]</span> / <span class="o">[</span>embedding_cnn_two_branch<span class="o">]</span> / <span class="o">[</span>embedding_dense<span class="o">]</span> <span class="o">(</span>all use
+                                                lowercase<span class="o">)</span>.
+  -t TYPE, --type TYPE  Please choose <span class="o">[</span>train<span class="o">]</span> / <span class="o">[</span>test<span class="o">]</span> <span class="o">(</span>all use lowercase<span class="o">)</span>.
+  -n NAME, --name NAME  Enter the gene name of your choice <span class="o">(</span>note: <span class="k">case</span> sensitive<span class="o">)</span>.
+</pre></div>
+</div>
+<p>You can open the help interface by running <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-h</span></code>, which introduces the role of each parameter.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="how-to-train-and-test-a-new-gene">
+<h2>How to train and test a new gene<a class="headerlink" href="#how-to-train-and-test-a-new-gene" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download">
+<h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
+<p>Download all codes and data structures from DeepChromeHiC, <a class="reference external" href="https://github.com/NaiveTom/DeepChromeHiC">https://github.com/NaiveTom/DeepChromeHiC</a>.</p>
+</div>
+<div class="section" id="copy">
+<h3>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h3>
+<p>Create a new folder called <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">gene</span> <span class="pre">name</span></code> in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder, for example, <code class="docutils literal notranslate"><span class="pre">AD2.po</span></code>.</p>
+<p>Then paste your genetic data into this folder.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer negative fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter negative fragments</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>A total of 5 types of data can be identified, <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code>, <code class="docutils literal notranslate"><span class="pre">T</span></code>, and <code class="docutils literal notranslate"><span class="pre">N</span></code>.</p></li>
+<li><p>Each piece of genetic data should occupy <code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">row</span></code>.</p></li>
+<li><p>The length of each gene data is <code class="docutils literal notranslate"><span class="pre">10K</span></code> (10001)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="coding-your-gene-fragment">
+<h3>Coding your gene fragment<a class="headerlink" href="#coding-your-gene-fragment" title="Permalink to this headline">¶</a></h3>
+<p>Excuting an order:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -p <span class="nb">true</span> -n AD2.po
+</pre></div>
+</div>
+<p>Then it will automatically start pre-processing AD2.po.</p>
+<p>This step will generate <code class="docutils literal notranslate"><span class="pre">png</span></code> files and <code class="docutils literal notranslate"><span class="pre">npz</span></code> files.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>This instruction should be used once, if the previous data already exists, the previous data will be overwritten.</p></li>
+<li><p>This program needs a lot of memory to run, and the time will be relatively long, generally about 15 minutes - 6 hours. Please wait patiently (there is no progress bar in the middle of the coding process, and the program is not stuck).</p></li>
+<li><p>This code will split and save the training set and test set according to 0.9 : 0.1. During the training process, the training set will be split again into training set and validation set according to 0.89 : 0.11. In other words, the final training set: validation set: test set = 0.8 : 0.1 : 0.1.</p></li>
+<li><p>This step will produce a large number of fragmented files, but the volume has been compressed by Huffman encoding, so it is recommended to use <code class="docutils literal notranslate"><span class="pre">SSD</span></code> for processing, which will significantly speed up the processing.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="run">
+<h3>Run!<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">cmd</span></code> command line, and then enter your drive letter, such as</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>D:
+</pre></div>
+</div>
+<p>Then cmd will enter the D drive: <code class="docutils literal notranslate"><span class="pre">D:\</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command to enter your project path, such as</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> D:<span class="se">\D</span>eepChromeHiC
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Use the following command to train your data</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t train -n AD2.po
+</pre></div>
+</div>
+<p>For the meaning of the command statement, please refer to the Section: <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">page</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Use the following command to test your data</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+</pre></div>
+</div>
+<p>For the meaning of the command statement, please refer to the Section: <code class="docutils literal notranslate"><span class="pre">Help</span> <span class="pre">page</span></code></p>
+</div></blockquote>
+</li>
+<li><p>The test and training results will be under the gene corresponding to the <code class="docutils literal notranslate"><span class="pre">result</span></code> folder. The model weights will be saved under the genes corresponding to the <code class="docutils literal notranslate"><span class="pre">h5_weights</span></code> folder.</p></li>
+</ol>
+</div>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The graphical results are saved in the <code class="docutils literal notranslate"><span class="pre">result</span></code> folder.</p></li>
+<li><p>The auc_roc results of the test are saved in the <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> for the convenience of subsequent data processing.</p></li>
+</ul>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="supercomputer.html" class="btn btn-neutral float-right" title="Run on a Supercomputer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to DeepChromeHiC’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

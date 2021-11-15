@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>test.py &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="model.py" href="model.py.html" />
+    <link rel="prev" title="train.py" href="train.py.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">test.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#test-cnn-dense-resnet">test_cnn_dense_resnet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#function-prototype">Function prototype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#imagedatagenerator">ImageDataGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-weights">Load Weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#show-auc-roc-curve">Show Auc Roc Curve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-result-as-text">Save Result as Text</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-cnn-separate">test_cnn_separate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Function prototype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ImageDataGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Load Weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Show Auc Roc Curve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Save Result as Text</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#test-embedding">test_embedding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Function prototype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Load Weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">Show Auc Roc Curve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Save Result as Text</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>test.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/test.py.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-py">
+<h1>test.py<a class="headerlink" href="#test-py" title="Permalink to this headline">¶</a></h1>
+<p>In order to adapt to different models, <code class="docutils literal notranslate"><span class="pre">test.py</span></code> is divided into three parts to perform three different model training tasks. test.py is friendly to supercomputer logs. It turns off the display of the progress bar to avoid flooding the screen and log system. At the same time, the picture will not be displayed and will be saved directly to the corresponding location.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="test-cnn-dense-resnet">
+<h2>test_cnn_dense_resnet<a class="headerlink" href="#test-cnn-dense-resnet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="function-prototype">
+<h3>Function prototype<a class="headerlink" href="#function-prototype" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">test_cnn_dense_resnet</span><span class="p">(</span><span class="n">gen_name</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function is called by <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC.py</span></code> . There are two inputs: the name of the gene to be trained <code class="docutils literal notranslate"><span class="pre">gen_name</span></code> and the name of the selected model <code class="docutils literal notranslate"><span class="pre">model_name</span></code></p>
+<p>This function has no return value.</p>
+<p>This function can test the following models:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_cnn_one_branch</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_embedding_dense</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_dense</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_resnet18</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_resnet34</span></code></p></li>
+</ol>
+<p>The model used by this function does <code class="docutils literal notranslate"><span class="pre">not</span></code> require <code class="docutils literal notranslate"><span class="pre">dna2vec</span> <span class="pre">embedding</span></code>, and the data is <code class="docutils literal notranslate"><span class="pre">merged</span> <span class="pre">before</span> <span class="pre">entering</span> <span class="pre">the</span> <span class="pre">model</span></code>.</p>
+</div>
+<div class="section" id="imagedatagenerator">
+<h3>ImageDataGenerator<a class="headerlink" href="#imagedatagenerator" title="Permalink to this headline">¶</a></h3>
+<p>In order to reduce the problem of storage space consumption, this model uses <code class="docutils literal notranslate"><span class="pre">png</span></code> images as input, and png uses Huffman coding compression, which greatly reduces the volume of data. Because the CPU speed is faster than the disk, it will not consume too much time to decode after being compressed into png format, and it is faster than reading the original data under the actual test.</p>
+<p>ImageDataGenerator should not shuffle the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+
+    <span class="n">datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">)</span>
+
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">32</span>
+
+<span class="n">test_generator</span> <span class="o">=</span> <span class="n">datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;data/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/png_test/&#39;</span><span class="p">,</span> <span class="n">target_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20002</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                             <span class="n">color_mode</span> <span class="o">=</span> <span class="s1">&#39;grayscale&#39;</span><span class="p">,</span>
+                                             <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                             <span class="n">shuffle</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># do not shuffle</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="load-weights">
+<h3>Load Weights<a class="headerlink" href="#load-weights" title="Permalink to this headline">¶</a></h3>
+<p>This function needs to <code class="docutils literal notranslate"><span class="pre">load</span></code> the previously trained <code class="docutils literal notranslate"><span class="pre">weights</span></code> and read the model in <code class="docutils literal notranslate"><span class="pre">model.py</span></code>, so that the program can run.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">clf</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">)</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;Load the model ...&#39;</span><span class="p">,</span> <span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-auc-roc-curve">
+<h3>Show Auc Roc Curve<a class="headerlink" href="#show-auc-roc-curve" title="Permalink to this headline">¶</a></h3>
+<p>This project uses the <code class="docutils literal notranslate"><span class="pre">auc</span> <span class="pre">roc</span> <span class="pre">curve</span></code> for <code class="docutils literal notranslate"><span class="pre">evaluation</span></code>, and you can add other evaluation functions to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, such as <code class="docutils literal notranslate"><span class="pre">accuracy</span></code>, <code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">entropy</span></code>, <code class="docutils literal notranslate"><span class="pre">loss</span></code>, and so on.</p>
+<p>This project can automatically calculate <code class="docutils literal notranslate"><span class="pre">auc</span></code> and use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to draw <code class="docutils literal notranslate"><span class="pre">roc</span> <span class="pre">curve</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Calculate ROC curve and AUC for each category</span>
+<span class="n">fpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">tpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># Two classification problem</span>
+<span class="n">n_classes</span> <span class="o">=</span> <span class="n">label_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># n_classes = 2</span>
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;n_classes&#39;</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span> <span class="c1"># n_classes = 2</span>
+
+<span class="c1"># Draw ROC curve using actual category and predicted probability</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">label_test</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">y_prob</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+    <span class="n">roc_auc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">,</span>
+         <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ROC curve (area = </span><span class="si">%0.6f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Receiver operating characteristic (ROC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;result/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;/rocauc.png&#39;</span><span class="p">)</span>
+<span class="c1"># plt.pause(0.01)</span>
+<span class="c1"># plt.show() # Supercomputers are completely command lines and cannot display pictures.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-result-as-text">
+<h3>Save Result as Text<a class="headerlink" href="#save-result-as-text" title="Permalink to this headline">¶</a></h3>
+<p>In order to facilitate reading and subsequent processing, and to know the <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">time</span></code> of each training (which can be determined according to the output time), the content is written into a <code class="docutils literal notranslate"><span class="pre">txt</span></code> file.</p>
+<p>The file adopts the scheme of append writing, so that the previous data will not be lost.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;log.txt&#39;</span><span class="p">,</span><span class="s1">&#39;a+&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">gen_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+<div class="section" id="test-cnn-separate">
+<h2>test_cnn_separate<a class="headerlink" href="#test-cnn-separate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Function prototype<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">test_cnn_separate</span><span class="p">(</span><span class="n">gen_name</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function is called by <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC.py</span></code> . There are two inputs: the name of the gene to be trained <code class="docutils literal notranslate"><span class="pre">gen_name</span></code> and the name of the selected model <code class="docutils literal notranslate"><span class="pre">model_name</span></code></p>
+<p>This function has no return value.</p>
+<p>This function can test the following models:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_cnn_two_branch</span></code></p></li>
+</ol>
+<p>The model used by this function does <code class="docutils literal notranslate"><span class="pre">not</span></code> require <code class="docutils literal notranslate"><span class="pre">dna2vec</span> <span class="pre">embedding</span></code>, and the data is <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">merged</span> <span class="pre">before</span> <span class="pre">entering</span> <span class="pre">the</span> <span class="pre">model</span></code>.</p>
+</div>
+<div class="section" id="id2">
+<h3>ImageDataGenerator<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>In order to reduce the problem of storage space consumption, this model uses <code class="docutils literal notranslate"><span class="pre">png</span></code> images as input, and png uses Huffman coding compression, which greatly reduces the volume of data. Because the CPU speed is faster than the disk, it will not consume too much time to decode after being compressed into png format, and it is faster than reading the original data under the actual test.</p>
+<p>ImageDataGenerator should not shuffle the data.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">from</span> <span class="nn">keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+
+<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">32</span>
+
+<span class="n">test_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span><span class="n">rescale</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="mi">255</span><span class="p">)</span>
+
+<span class="c1"># This is used to generate the label</span>
+<span class="n">test_generator</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;data/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/test_en/&#39;</span><span class="p">,</span> <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="mi">10001</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                  <span class="n">color_mode</span> <span class="o">=</span> <span class="s1">&#39;grayscale&#39;</span><span class="p">,</span>
+                                                  <span class="n">class_mode</span> <span class="o">=</span> <span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+                                                  <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                                  <span class="n">shuffle</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># do not shuffle</span>
+
+<span class="k">def</span> <span class="nf">generator_two_test</span><span class="p">():</span>
+    <span class="n">test_generator1</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;data/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/test_en/&#39;</span><span class="p">,</span> <span class="n">target_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10001</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                      <span class="n">color_mode</span> <span class="o">=</span> <span class="s1">&#39;grayscale&#39;</span><span class="p">,</span>
+                                                      <span class="n">class_mode</span> <span class="o">=</span> <span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+                                                      <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                                      <span class="n">shuffle</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># do not shuffle</span>
+
+    <span class="n">test_generator2</span> <span class="o">=</span> <span class="n">test_datagen</span><span class="o">.</span><span class="n">flow_from_directory</span><span class="p">(</span><span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;data/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/test_pr/&#39;</span><span class="p">,</span> <span class="n">target_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10001</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+                                                      <span class="n">color_mode</span> <span class="o">=</span> <span class="s1">&#39;grayscale&#39;</span><span class="p">,</span>
+                                                      <span class="n">class_mode</span> <span class="o">=</span> <span class="s1">&#39;categorical&#39;</span><span class="p">,</span>
+                                                      <span class="n">batch_size</span> <span class="o">=</span> <span class="n">BATCH_SIZE</span><span class="p">,</span>
+                                                      <span class="n">shuffle</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># do not shuffle</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">out1</span> <span class="o">=</span> <span class="n">test_generator1</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+        <span class="n">out2</span> <span class="o">=</span> <span class="n">test_generator2</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+        <span class="k">yield</span> <span class="p">[</span><span class="n">out1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">out2</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="c1"># , out1[1] # Return the combination of two and the result</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Load Weights<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>This function needs to <code class="docutils literal notranslate"><span class="pre">load</span></code> the previously trained <code class="docutils literal notranslate"><span class="pre">weights</span></code> and read the model in <code class="docutils literal notranslate"><span class="pre">model.py</span></code>, so that the program can run.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">clf</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">)</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;Load the model ...&#39;</span><span class="p">,</span> <span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Show Auc Roc Curve<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This project uses the <code class="docutils literal notranslate"><span class="pre">auc</span> <span class="pre">roc</span> <span class="pre">curve</span></code> for <code class="docutils literal notranslate"><span class="pre">evaluation</span></code>, and you can add other evaluation functions to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, such as <code class="docutils literal notranslate"><span class="pre">accuracy</span></code>, <code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">entropy</span></code>, <code class="docutils literal notranslate"><span class="pre">loss</span></code>, and so on.</p>
+<p>This project can automatically calculate <code class="docutils literal notranslate"><span class="pre">auc</span></code> and use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to draw <code class="docutils literal notranslate"><span class="pre">roc</span> <span class="pre">curve</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Calculate ROC curve and AUC for each category</span>
+<span class="n">fpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">tpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># Two classification problem</span>
+<span class="n">n_classes</span> <span class="o">=</span> <span class="n">label_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># n_classes = 2</span>
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;n_classes&#39;</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span> <span class="c1"># n_classes = 2</span>
+
+<span class="c1"># Draw ROC curve using actual category and predicted probability</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">label_test</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">y_prob</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+    <span class="n">roc_auc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">,</span>
+         <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ROC curve (area = </span><span class="si">%0.6f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Receiver operating characteristic (ROC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;result/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;/rocauc.png&#39;</span><span class="p">)</span>
+<span class="c1"># plt.pause(0.01)</span>
+<span class="c1"># plt.show() # Supercomputers are completely command lines and cannot display pictures.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Save Result as Text<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>In order to facilitate reading and subsequent processing, and to know the <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">time</span></code> of each training (which can be determined according to the output time), the content is written into a <code class="docutils literal notranslate"><span class="pre">txt</span></code> file.</p>
+<p>The file adopts the scheme of append writing, so that the previous data will not be lost.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;log.txt&#39;</span><span class="p">,</span><span class="s1">&#39;a+&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">gen_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+<div class="section" id="test-embedding">
+<h2>test_embedding<a class="headerlink" href="#test-embedding" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Function prototype<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">test_embedding</span><span class="p">(</span><span class="n">gen_name</span><span class="p">,</span> <span class="n">model_name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This function is called by <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC.py</span></code> . There are two inputs: the name of the gene to be trained <code class="docutils literal notranslate"><span class="pre">gen_name</span></code> and the name of the selected model <code class="docutils literal notranslate"><span class="pre">model_name</span></code></p>
+<p>This function has no return value.</p>
+<p>This function can test the following models:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">onehot_cnn_two_branch</span></code></p></li>
+</ol>
+<p>The model used by this function require <code class="docutils literal notranslate"><span class="pre">dna2vec</span> <span class="pre">embedding</span></code>.</p>
+</div>
+<div class="section" id="id7">
+<h3>Load Weights<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>This function needs to <code class="docutils literal notranslate"><span class="pre">load</span></code> the previously trained <code class="docutils literal notranslate"><span class="pre">weights</span></code> and read the model in <code class="docutils literal notranslate"><span class="pre">model.py</span></code>, so that the program can run.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">clf</span><span class="o">.</span><span class="n">load_weights</span><span class="p">(</span><span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">)</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;Load the model ...&#39;</span><span class="p">,</span> <span class="s1">&#39;h5_weights/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;.h5&#39;</span><span class="p">,</span> <span class="s1">&#39;=&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Show Auc Roc Curve<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>This project uses the <code class="docutils literal notranslate"><span class="pre">auc</span> <span class="pre">roc</span> <span class="pre">curve</span></code> for <code class="docutils literal notranslate"><span class="pre">evaluation</span></code>, and you can add other evaluation functions to <code class="docutils literal notranslate"><span class="pre">test.py</span></code>, such as <code class="docutils literal notranslate"><span class="pre">accuracy</span></code>, <code class="docutils literal notranslate"><span class="pre">f1</span></code>, <code class="docutils literal notranslate"><span class="pre">entropy</span></code>, <code class="docutils literal notranslate"><span class="pre">loss</span></code>, and so on.</p>
+<p>This project can automatically calculate <code class="docutils literal notranslate"><span class="pre">auc</span></code> and use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to draw <code class="docutils literal notranslate"><span class="pre">roc</span> <span class="pre">curve</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Calculate ROC curve and AUC for each category</span>
+<span class="n">fpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">tpr</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">roc_auc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># Two classification problem</span>
+<span class="n">n_classes</span> <span class="o">=</span> <span class="n">label_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># n_classes = 2</span>
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;n_classes&#39;</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">)</span> <span class="c1"># n_classes = 2</span>
+
+<span class="c1"># Draw ROC curve using actual category and predicted probability</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">label_test</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">y_prob</span><span class="p">[:,</span> <span class="n">i</span><span class="p">])</span>
+    <span class="n">roc_auc</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">auc</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">fancy_print</span><span class="p">(</span><span class="s1">&#39;roc_auc&#39;</span><span class="p">,</span> <span class="n">roc_auc</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tpr</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;darkorange&#39;</span><span class="p">,</span>
+         <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;ROC curve (area = </span><span class="si">%0.6f</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;navy&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="n">lw</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;False Positive Rate&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True Positive Rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Receiver operating characteristic (ROC)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;lower right&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;result/&#39;</span><span class="o">+</span><span class="n">gen_name</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">model_name</span><span class="o">+</span><span class="s1">&#39;/rocauc.png&#39;</span><span class="p">)</span>
+<span class="c1"># plt.pause(0.01)</span>
+<span class="c1"># plt.show() # Supercomputers are completely command lines and cannot display pictures.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Save Result as Text<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>In order to facilitate reading and subsequent processing, and to know the <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">time</span></code> of each training (which can be determined according to the output time), the content is written into a <code class="docutils literal notranslate"><span class="pre">txt</span></code> file.</p>
+<p>The file adopts the scheme of append writing, so that the previous data will not be lost.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">fw</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;log.txt&#39;</span><span class="p">,</span><span class="s1">&#39;a+&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">time</span><span class="o">.</span><span class="n">asctime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">localtime</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="n">gen_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">model_name</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">roc_auc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="model.py.html" class="btn btn-neutral float-right" title="model.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="train.py.html" class="btn btn-neutral float-left" title="train.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

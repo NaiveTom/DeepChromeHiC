@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data Structure &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="data_preprocessing.py" href="data_preprocessing.py.html" />
+    <link rel="prev" title="DeepChromeHiC.py" href="DeepChromeHiC.py.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#legend">legend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#actual-structure">Actual Structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data Structure</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/datastructure.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-structure">
+<h1>Data Structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">¶</a></h1>
+<p>This chapter will introduce the data structure of DeepChromeHiC.
+That is, where all the folder meanings and data will be imported and output from.</p>
+<div class="section" id="legend">
+<h2>legend<a class="headerlink" href="#legend" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Root</span> <span class="pre">directory</span></code></p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">1</span></code></p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">2</span></code></p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">3</span></code></p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">4</span></code></p>
+<blockquote>
+<div><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">5</span></code></p>
+<blockquote>
+<div><p>It has not been used yet.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Subdirectory</span> <span class="pre">level</span> <span class="pre">6</span></code></p>
+<blockquote>
+<div><p>It has not been used yet.</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="actual-structure">
+<h2>Actual Structure<a class="headerlink" href="#actual-structure" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">DeepChromeHiC</span></code></p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">root</span></code> folder of this project. All files should be stored in this directory and its subdirectories.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">DeepChromeHiC.py</span></code></p>
+<blockquote>
+<div><p>Command line file, used to call all functions. It is the <code class="docutils literal notranslate"><span class="pre">root</span> <span class="pre">program</span></code> of this project.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_preprocessing.py</span></code></p>
+<blockquote>
+<div><p>Used to <code class="docutils literal notranslate"><span class="pre">preprocess</span> <span class="pre">data</span></code>, generate <code class="docutils literal notranslate"><span class="pre">npz</span></code> and <code class="docutils literal notranslate"><span class="pre">png</span></code> files, use <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-p</span> <span class="pre">true</span> <span class="pre">-n</span> <span class="pre">[gene</span> <span class="pre">name]</span></code> to call</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model.py</span></code></p>
+<blockquote>
+<div><p>Stored <code class="docutils literal notranslate"><span class="pre">all</span> <span class="pre">models</span></code>, including: <code class="docutils literal notranslate"><span class="pre">onehot_cnn_one_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_cnn_two_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_embedding_dense</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_embedding_cnn_one_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_embedding_cnn_two_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_dense</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_resnet18</span></code> / <code class="docutils literal notranslate"><span class="pre">onehot_resnet34</span></code> / <code class="docutils literal notranslate"><span class="pre">embedding_cnn_one_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">embedding_cnn_two_branch</span></code> / <code class="docutils literal notranslate"><span class="pre">embedding_dense</span></code></p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">train.py</span></code></p>
+<blockquote>
+<div><p>For <code class="docutils literal notranslate"><span class="pre">training</span> <span class="pre">data</span></code>, this py file will call <code class="docutils literal notranslate"><span class="pre">model.py</span></code> to load the model. Use <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-m</span> <span class="pre">[model</span> <span class="pre">name]</span> <span class="pre">-t</span> <span class="pre">train</span> <span class="pre">-n</span> <span class="pre">[gene</span> <span class="pre">name]</span></code> to call</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test.py</span></code></p>
+<blockquote>
+<div><p>For <code class="docutils literal notranslate"><span class="pre">testing</span> <span class="pre">data</span></code>, this py file will call <code class="docutils literal notranslate"><span class="pre">model.py</span></code> to load the model. Use <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-m</span> <span class="pre">[model</span> <span class="pre">name]</span> <span class="pre">-t</span> <span class="pre">test</span> <span class="pre">-n</span> <span class="pre">[gene</span> <span class="pre">name]</span></code> to call</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_filter.py</span></code></p>
+<blockquote>
+<div><p>It is used to divide <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> file, which is <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">part</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">main</span> <span class="pre">program</span></code>. It needs <code class="docutils literal notranslate"><span class="pre">log.txt</span></code>. It can be divided by running directly, and the divided data is written into <code class="docutils literal notranslate"><span class="pre">log_filted.txt</span></code>. It is mainly used to exclude the timestamp and make it suitable The format of csv processing.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log.txt</span></code></p>
+<blockquote>
+<div><p>Used to store the results in <code class="docutils literal notranslate"><span class="pre">auc</span> <span class="pre">roc</span></code>, which is a file automatically generated and appended by <code class="docutils literal notranslate"><span class="pre">test.py</span></code></p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_filted.txt</span></code></p>
+<blockquote>
+<div><p>This file is a file obtained by processing <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> by <code class="docutils literal notranslate"><span class="pre">log_filter.py</span></code> . The time stamp is removed and it is generated into a data format suitable for csv processing.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fig.py</span></code></p>
+<blockquote>
+<div><p>This is a practical tool, used to generate <code class="docutils literal notranslate"><span class="pre">charts</span></code> from <code class="docutils literal notranslate"><span class="pre">data</span></code>, and the generated charts are placed in the <code class="docutils literal notranslate"><span class="pre">img</span></code> folder.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">embedding_matrix.npy</span></code></p>
+<blockquote>
+<div><p>The <code class="docutils literal notranslate"><span class="pre">DNA2VEC</span> <span class="pre">embedding</span></code> file is generated using <code class="docutils literal notranslate"><span class="pre">all</span> <span class="pre">hg19</span> <span class="pre">gene</span> <span class="pre">data</span></code>, which contains 4097*100 dimensions (<code class="docutils literal notranslate"><span class="pre">6mer</span></code>, 2**6=4096, where the first line is the initial line, all 0), which is used to embedding gene data.</p>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">data</span></code></p>
+<blockquote>
+<div><p>What is stored is genetic data and pre-training results.</p>
+<ul>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">Example:</span> <span class="pre">AD2.po</span></code></p>
+<blockquote>
+<div><p>Example: AD2.po, specific gene folder</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">seq.anchor1.pos.txt</span></code></dt><dd><p>Put in the enhancer positive fragments</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">seq.anchor1.neg2.txt</span></code></dt><dd><p>Put in the enhancer negative fragments</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">seq.anchor2.pos.txt</span></code></dt><dd><p>Put in the promoter positive fragments</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">seq.anchor2.neg2.txt</span></code></dt><dd><p>Put in the promoter negative fragments</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">lib</span></code></p>
+<blockquote>
+<div><p>The python3 module written by yourself is stored in this directory.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">residual_block.py</span></code></p>
+<blockquote>
+<div><p>This is the basic part of resnet, the resnet block.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resnet.py</span></code></p>
+<blockquote>
+<div><p>This is a resnet file, including resnet18, resnet34, resnet50, resnet101, resnet152, you can modify more, but the memory overhead is too large.</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">h5_weights</span></code></p>
+<blockquote>
+<div><p>This folder contains network weights in h5 format. Here, weights are stored instead of models, because this can reduce the volume occupied.</p>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">result</span></code></p>
+<blockquote>
+<div><p>Used to store the test <code class="docutils literal notranslate"><span class="pre">results</span></code>, which store the <code class="docutils literal notranslate"><span class="pre">roc</span></code> curve and <code class="docutils literal notranslate"><span class="pre">auc</span></code> area.
+There is a folder for each genome. Under the genome folder are various model folders, and under each model folder are image files.</p>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">img</span></code></p>
+<blockquote>
+<div><p>It is used to hold the figures generated by <code class="docutils literal notranslate"><span class="pre">fig.py</span></code>, and each figure is named after the <code class="docutils literal notranslate"><span class="pre">gene's</span> <span class="pre">name</span></code>.</p>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">slurm</span></code></p>
+<blockquote>
+<div><p>This folder is used to hold <code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">scripts</span></code> and <code class="docutils literal notranslate"><span class="pre">slurm</span> <span class="pre">logs</span></code> for supercomputer operation.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">getsh.py</span></code></p>
+<blockquote>
+<div><p>This py file is used to generate the sh script of slurm, which can be run in batches quickly.</p>
+</div></blockquote>
+</li>
+<li><p>File path <code class="docutils literal notranslate"><span class="pre">log</span></code></p>
+<blockquote>
+<div><p>Used to hold <code class="docutils literal notranslate"><span class="pre">.err</span></code> training error and prompt files and <code class="docutils literal notranslate"><span class="pre">.log</span></code> log files</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="data_preprocessing.py.html" class="btn btn-neutral float-right" title="data_preprocessing.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="DeepChromeHiC.py.html" class="btn btn-neutral float-left" title="DeepChromeHiC.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

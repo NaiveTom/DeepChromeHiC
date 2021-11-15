@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>data_preprocessing.py &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="train.py" href="train.py.html" />
+    <link rel="prev" title="Data Structure" href="datastructure.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">data_preprocessing.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#png-generation-part">png generation part</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#npz-generation-part">npz generation part</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>data_preprocessing.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/data_preprocessing.py.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-preprocessing-py">
+<h1>data_preprocessing.py<a class="headerlink" href="#data-preprocessing-py" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">data_preprocessing.py</span></code> is used to preprocess data, including generating <code class="docutils literal notranslate"><span class="pre">png</span></code> files and <code class="docutils literal notranslate"><span class="pre">npz</span></code> files.</p>
+<p>The main function of <code class="docutils literal notranslate"><span class="pre">data_preprocessing.py</span></code> is <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">data_prep(gen_name)</span></code>, which is divided into two parts:</p>
+<ul class="simple">
+<li><p>the first part is to generate <code class="docutils literal notranslate"><span class="pre">png</span></code></p></li>
+<li><p>the second part is to generate <code class="docutils literal notranslate"><span class="pre">npz</span></code></p></li>
+</ul>
+<p>This article will introduce the data preprocessing process.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="png-generation-part">
+<h2>png generation part<a class="headerlink" href="#png-generation-part" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir(Generated</span> <span class="pre">file</span> <span class="pre">path)</span></code></p>
+<blockquote>
+<div><p>First generate the file path, create the folder, and then put the data into the corresponding folder, otherwise python will report an error.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read_data(Read</span> <span class="pre">ACTGN</span> <span class="pre">data)</span></code></p>
+<blockquote>
+<div><p>Read all the data from the <code class="docutils literal notranslate"><span class="pre">txt</span></code> file, and convert <code class="docutils literal notranslate"><span class="pre">ACGTN</span></code> to the corresponding number to facilitate <code class="docutils literal notranslate"><span class="pre">one-hot</span> <span class="pre">encoding</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It can only recognize <code class="docutils literal notranslate"><span class="pre">ACGTN</span></code> data and is <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">sensitive</span></code>.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cut</span></code></p>
+<blockquote>
+<div><p>Cut the <code class="docutils literal notranslate"><span class="pre">positive</span></code> and <code class="docutils literal notranslate"><span class="pre">negative</span></code> into the <code class="docutils literal notranslate"><span class="pre">same</span> <span class="pre">size</span></code>.</p>
+<p>Because the data needs to be connected together later, it must be the same size to run.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">shuffle(use:</span> <span class="pre">np.random.choice)</span></code></p>
+<blockquote>
+<div><p>The data <code class="docutils literal notranslate"><span class="pre">must</span> <span class="pre">be</span> <span class="pre">shuffled</span></code>, because similar data are all together. Otherwise, the model cannot be trained, and the accuracy rate will always hover around 0.5.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_split</span></code></p>
+<blockquote>
+<div><p>The data will be divided into <code class="docutils literal notranslate"><span class="pre">training</span> <span class="pre">set</span></code> and <code class="docutils literal notranslate"><span class="pre">testing</span> <span class="pre">set</span></code>, the split ratio is <code class="docutils literal notranslate"><span class="pre">0.9:0.1</span></code>, and then the training set will continue to be split into <code class="docutils literal notranslate"><span class="pre">0.89:0.11</span></code> in <code class="docutils literal notranslate"><span class="pre">train.py</span></code>, that is to say, <code class="docutils literal notranslate"><span class="pre">training</span> <span class="pre">set:</span> <span class="pre">validation</span> <span class="pre">set:</span> <span class="pre">testing</span> <span class="pre">set=0.8</span> <span class="pre">:</span> <span class="pre">0.1:</span> <span class="pre">0.1</span></code></p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">to_categorical</span></code></p>
+<blockquote>
+<div><p>from keras.utils import to_categorical, keras provides a very convenient and easy-to-use function to_categorical, which can be used to perform fast one-hot encoding with high efficiency and fast speed. So the one-hot encoding here is to use the function provided by keras.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">png</span></code></p>
+<blockquote>
+<div><p>There is a bit of confusion here, because if all the data is one-hot-encoded and then png is generated at one time, the system will be stuck, no results will be given for a long time, and a lot of memory will be used, so something special is needed here. Processing.</p>
+<p>Because the test set is relatively small, the test set can be generated all at once.</p>
+<p>The training set is very large, so the training set is divided into small pieces of <code class="docutils literal notranslate"><span class="pre">1000</span></code>, and each piece of data is processed and the background garbage collection mechanism operates to release the memory, so that it will not cause the problem of memory leaks.</p>
+<p>Python’s garbage collection mechanism is divided into three layers. Different generations of garbage are collected asynchronously. In order to release memory as soon as possible, <code class="docutils literal notranslate"><span class="pre">gc.collect()</span></code> is used here to directly collect memory garbage of all generations.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">to</span> <span class="pre">png</span> <span class="pre">file(imageio)</span></code></p>
+<blockquote>
+<div><p>In the end, we need to write png files, which can be written to png files very easily using the interface provided by imageio. The png files come with compression, so it can save space very much.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>About the progress bar</strong></p>
+<p>If you are using a <code class="docutils literal notranslate"><span class="pre">graphical</span> <span class="pre">operating</span> <span class="pre">system</span></code> such as <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code> or <code class="docutils literal notranslate"><span class="pre">Windows</span></code>, and all data is displayed <code class="docutils literal notranslate"><span class="pre">directly</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">command</span> <span class="pre">line</span></code>, then you can use the progress bar to display the image generation.</p>
+<p>The method is like this, comment out <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">range(len(test_pos)):</span></code> and use <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">tqdm.trange(</span> <span class="pre">len(test_pos),</span> <span class="pre">ascii=True</span> <span class="pre">):</span></code>.</p>
+<p>There are these codes in data_preprocessing.py, you only need to use `` # `` to comment out the current code and restore the commented out code.</p>
+<p>It takes a lot of time to generate these pictures, so it is necessary for the real-time system using progress bar.</p>
+<p>If your python3 has not installed the <code class="docutils literal notranslate"><span class="pre">tqdm</span></code> module, use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">tqdm</span></code> to install this module. The Linux environment may require <code class="docutils literal notranslate"><span class="pre">sudo</span></code> permissions.</p>
+<p>Please note that the file system to which txt belongs cannot display the <code class="docutils literal notranslate"><span class="pre">backspace</span> <span class="pre">character(\b)</span></code>, so if you use a supercomputer to run these codes, <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">use</span> <span class="pre">tqdm</span></code>, because this will generate a large number of characters that txt cannot recognize and write quite long useless log data.</p>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="npz-generation-part">
+<h2>npz generation part<a class="headerlink" href="#npz-generation-part" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/word2vec.png" src="_images/word2vec.png" />
+<p><code class="docutils literal notranslate"><span class="pre">word2vec</span></code> proved to be a very good embedding method, which can find the connection between different words and improve the feasibility of NLP.</p>
+<img alt="_images/dna2vec.jpg" src="_images/dna2vec.jpg" />
+<p><code class="docutils literal notranslate"><span class="pre">DNA2vec</span></code> is an application of word2vec. First cut DNA into <code class="docutils literal notranslate"><span class="pre">6mer</span></code> or <code class="docutils literal notranslate"><span class="pre">4mer</span></code>, and then use embedding method to vectorize DNA.</p>
+<p>This method uses <code class="docutils literal notranslate"><span class="pre">6mer</span></code>, which means that there are a total of <code class="docutils literal notranslate"><span class="pre">2**6+1</span> <span class="pre">Vectors</span></code> (the first vector is a 0 vector), and the dimension of each vector is 100, which means that data of <code class="docutils literal notranslate"><span class="pre">4097*100</span></code> dimensions will be generated.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">and</span> <span class="pre">preprocess</span> <span class="pre">it</span></code></p>
+<blockquote>
+<div><p>First, the data needs to be read and preprocessed, and then symbols such as <code class="docutils literal notranslate"><span class="pre">ACGT</span></code> can be converted into codes for processing.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Break</span> <span class="pre">Sentences</span> <span class="pre">into</span> <span class="pre">Words</span></code></p>
+<blockquote>
+<div><p>First break the sentence into words so that you can proceed with subsequent processing.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">Word</span> <span class="pre">to</span> <span class="pre">Vector</span></code></p>
+<blockquote>
+<div><p>Convert tokenized words into Vectors.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Data</span></code></p>
+<blockquote>
+<div><p>Save the <code class="docutils literal notranslate"><span class="pre">npz</span></code> file to the corresponding location. End of program.</p>
+</div></blockquote>
+</li>
+</ul>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="train.py.html" class="btn btn-neutral float-right" title="train.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="datastructure.html" class="btn btn-neutral float-left" title="Data Structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,853 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>model.py &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Log and Processing Tools" href="tools.html" />
+    <link rel="prev" title="test.py" href="test.py.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">model.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-introduction">Module Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-cnn-one-branch">onehot_cnn_one_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-cnn-two-branch">onehot_cnn_two_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-embedding-dense">onehot_embedding_dense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-embedding-cnn-one-branch">onehot_embedding_cnn_one_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-embedding-cnn-two-branch">onehot_embedding_cnn_two_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-dense">onehot_dense</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-resnet18">onehot_resnet18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#onehot-resnet34">onehot_resnet34</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedding-cnn-one-branch">embedding_cnn_one_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedding-cnn-two-branch">embedding_cnn_two_branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embedding-dense">embedding_dense</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>model.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/model.py.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-py">
+<h1>model.py<a class="headerlink" href="#model-py" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">model.py</span></code> is used to store the model. A total of <code class="docutils literal notranslate"><span class="pre">11</span></code> different models are placed here. These models need to be used in <code class="docutils literal notranslate"><span class="pre">train.py</span></code> and <code class="docutils literal notranslate"><span class="pre">test.py</span></code>.</p>
+<p>This module will introduce the structure, usage and performance of these models.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="module-introduction">
+<h2>Module Introduction<a class="headerlink" href="#module-introduction" title="Permalink to this headline">¶</a></h2>
+<p>This release includes multiple models:</p>
+<div class="section" id="onehot-cnn-one-branch">
+<h3>onehot_cnn_one_branch<a class="headerlink" href="#onehot-cnn-one-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use CNN to process, and finally get the output</p>
+<img alt="_images/model_onehot_cnn_one_branch.png" src="_images/model_onehot_cnn_one_branch.png" />
+<p>Single branch cnn model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2, and then merge the two one-hot encoded data. Use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat this CNN unit three times, then flatten the data and send it to the dense layer, insert a dropout layer between the two dense layers to prevent the model Over-fitting, and finally output the result (2 values) in the form of one-hot encoding. This model imitates the well-known image processing model VGG16, which has more parameters and can obtain better results.</p>
+<img alt="_images/onehot_cnn_one_branch.png" src="_images/onehot_cnn_one_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_cnn_one_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;sequential&quot;</span>
+_________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                 Output Shape              Param <span class="c1">#</span>
+<span class="o">=================================================================</span>
+conv2d <span class="o">(</span>Conv2D<span class="o">)</span>              <span class="o">(</span>None, <span class="m">5001</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">1600</span>
+_________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNo <span class="o">(</span>None, <span class="m">5001</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">256</span>
+_________________________________________________________________
+activation <span class="o">(</span>Activation<span class="o">)</span>      <span class="o">(</span>None, <span class="m">5001</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">0</span>
+_________________________________________________________________
+conv2d_1 <span class="o">(</span>Conv2D<span class="o">)</span>            <span class="o">(</span>None, <span class="m">1251</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">98368</span>
+_________________________________________________________________
+batch_normalization_1 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">1251</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">256</span>
+_________________________________________________________________
+activation_1 <span class="o">(</span>Activation<span class="o">)</span>    <span class="o">(</span>None, <span class="m">1251</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>       <span class="m">0</span>
+_________________________________________________________________
+max_pooling2d <span class="o">(</span>MaxPooling2D<span class="o">)</span> <span class="o">(</span>None, <span class="m">312</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>        <span class="m">0</span>
+_________________________________________________________________
+batch_normalization_2 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">312</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>        <span class="m">256</span>
+_________________________________________________________________
+conv2d_2 <span class="o">(</span>Conv2D<span class="o">)</span>            <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">196736</span>
+_________________________________________________________________
+batch_normalization_3 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">512</span>
+_________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>    <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">0</span>
+_________________________________________________________________
+conv2d_3 <span class="o">(</span>Conv2D<span class="o">)</span>            <span class="o">(</span>None, <span class="m">20</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">393344</span>
+_________________________________________________________________
+batch_normalization_4 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">20</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">512</span>
+_________________________________________________________________
+activation_3 <span class="o">(</span>Activation<span class="o">)</span>    <span class="o">(</span>None, <span class="m">20</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>        <span class="m">0</span>
+_________________________________________________________________
+max_pooling2d_1 <span class="o">(</span>MaxPooling2 <span class="o">(</span>None, <span class="m">5</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>         <span class="m">0</span>
+_________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>            <span class="o">(</span>None, <span class="m">3200</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+batch_normalization_5 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">3200</span><span class="o">)</span>              <span class="m">12800</span>
+_________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">6555648</span>
+_________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>            <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">4196352</span>
+_________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>          <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">1000</span><span class="o">)</span>              <span class="m">2049000</span>
+_________________________________________________________________
+dense_3 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2</span><span class="o">)</span>                 <span class="nv">2002</span>
+<span class="o">=================================================================</span>
+Total params: <span class="m">13</span>,507,642
+Trainable params: <span class="m">13</span>,500,346
+Non-trainable params: <span class="m">7</span>,296
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_cnn_one_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-cnn-two-branch">
+<h3>onehot_cnn_two_branch<a class="headerlink" href="#onehot-cnn-two-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different CNN networks, and then merge the CNN networks to finally get the output</p>
+<img alt="_images/model_onehot_cnn_two_branch.png" src="_images/model_onehot_cnn_two_branch.png" />
+<p>Two-branch cnn model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively, and then send them to different CNN units. Use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat this CNN unit three times, then merge the Sequence in Interaction Region1 branch and Sequence in Interaction Region2 branch of the CNN unit and flatten the data and Send it to the dense layer, insert a dropout layer between the two dense layers to prevent the model from overfitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_cnn_two_branch.png" src="_images/onehot_cnn_two_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_cnn_two_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">10001</span>, <span class="m">5</span>, <span class="m">1</span><span class="o">)</span> <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">10001</span>, <span class="m">5</span>, <span class="m">1</span><span class="o">)</span> <span class="m">0</span>
+__________________________________________________________________________________________________
+conv2d <span class="o">(</span>Conv2D<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">2501</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>  <span class="m">1600</span>        input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_6 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">2501</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>  <span class="m">1600</span>        input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_1 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">626</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>   <span class="m">98368</span>       conv2d<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_7 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">626</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>   <span class="m">98368</span>       conv2d_6<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_2 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">157</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>   <span class="m">98368</span>       conv2d_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_8 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">157</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>   <span class="m">98368</span>       conv2d_7<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+max_pooling2d <span class="o">(</span>MaxPooling2D<span class="o">)</span>    <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>    <span class="m">0</span>           conv2d_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+max_pooling2d_2 <span class="o">(</span>MaxPooling2D<span class="o">)</span>  <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>    <span class="m">0</span>           conv2d_8<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNorma <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>    <span class="m">256</span>         max_pooling2d<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">78</span>, <span class="m">5</span>, <span class="m">64</span><span class="o">)</span>    <span class="m">256</span>         max_pooling2d_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_3 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">20</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>   <span class="m">196736</span>      batch_normalization<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_9 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">20</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>   <span class="m">196736</span>      batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_4 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">5</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">393344</span>      conv2d_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_10 <span class="o">(</span>Conv2D<span class="o">)</span>              <span class="o">(</span>None, <span class="m">5</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">393344</span>      conv2d_9<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_5 <span class="o">(</span>Conv2D<span class="o">)</span>               <span class="o">(</span>None, <span class="m">2</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">393344</span>      conv2d_4<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+conv2d_11 <span class="o">(</span>Conv2D<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">393344</span>      conv2d_10<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+max_pooling2d_1 <span class="o">(</span>MaxPooling2D<span class="o">)</span>  <span class="o">(</span>None, <span class="m">1</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">0</span>           conv2d_5<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+max_pooling2d_3 <span class="o">(</span>MaxPooling2D<span class="o">)</span>  <span class="o">(</span>None, <span class="m">1</span>, <span class="m">5</span>, <span class="m">128</span><span class="o">)</span>    <span class="m">0</span>           conv2d_11<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">640</span><span class="o">)</span>          <span class="m">0</span>           max_pooling2d_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten_1 <span class="o">(</span>Flatten<span class="o">)</span>             <span class="o">(</span>None, <span class="m">640</span><span class="o">)</span>          <span class="m">0</span>           max_pooling2d_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_1 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">640</span><span class="o">)</span>          <span class="m">2560</span>        flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_3 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">640</span><span class="o">)</span>          <span class="m">2560</span>        flatten_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">1312768</span>     batch_normalization_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">1312768</span>     batch_normalization_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">0</span>           dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">0</span>           dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">4096</span><span class="o">)</span>         <span class="m">0</span>           dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">8390656</span>     concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>         <span class="m">0</span>           dense_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_3 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1000</span><span class="o">)</span>         <span class="m">2049000</span>     dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_4 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">2</span><span class="o">)</span>            <span class="m">2002</span>        dense_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">15</span>,436,346
+Trainable params: <span class="m">15</span>,433,530
+Non-trainable params: <span class="m">2</span>,816
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_cnn_two_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-embedding-dense">
+<h3>onehot_embedding_dense<a class="headerlink" href="#onehot-embedding-dense" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, then use the embedding layer to embed the gene fragment, and then send it to multiple dense layers and output</p>
+<img alt="_images/model_onehot_embedding_dense.png" src="_images/model_onehot_embedding_dense.png" />
+<p>One-hot encoding and embedding model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively, and then merge the two one-hot encoded data. Then use the 6mer embedding layer for embedding, then flatten the data and send it to the dense layer, insert a dropout layer between the two dense layers to prevent the model from overfitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_embedding_dense.png" src="_images/onehot_embedding_dense.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_embedding_dense</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;sequential&quot;</span>
+_________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                 Output Shape              Param <span class="c1">#</span>
+<span class="o">=================================================================</span>
+embedding <span class="o">(</span>Embedding<span class="o">)</span>        <span class="o">(</span>None, <span class="m">20002</span>, <span class="m">5</span>, <span class="m">1</span>, <span class="m">6</span><span class="o">)</span>    <span class="m">24582</span>
+_________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>            <span class="o">(</span>None, <span class="m">600060</span><span class="o">)</span>            <span class="m">0</span>
+_________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNo <span class="o">(</span>None, <span class="m">600060</span><span class="o">)</span>            <span class="m">2400240</span>
+_________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">307231232</span>
+_________________________________________________________________
+batch_normalization_1 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">2048</span>
+_________________________________________________________________
+activation <span class="o">(</span>Activation<span class="o">)</span>      <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">0</span>
+_________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>            <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">0</span>
+_________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">262656</span>
+_________________________________________________________________
+batch_normalization_2 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">2048</span>
+_________________________________________________________________
+activation_1 <span class="o">(</span>Activation<span class="o">)</span>    <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">0</span>
+_________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>          <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">0</span>
+_________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">262656</span>
+_________________________________________________________________
+batch_normalization_3 <span class="o">(</span>Batch <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">2048</span>
+_________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>    <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>               <span class="m">0</span>
+_________________________________________________________________
+dense_3 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2</span><span class="o">)</span>                 <span class="nv">1026</span>
+<span class="o">=================================================================</span>
+Total params: <span class="m">310</span>,188,536
+Trainable params: <span class="m">308</span>,985,344
+Non-trainable params: <span class="m">1</span>,203,192
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_embedding_dense.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-embedding-cnn-one-branch">
+<h3>onehot_embedding_cnn_one_branch<a class="headerlink" href="#onehot-embedding-cnn-one-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, then use the embedding layer for embedding and then use CNN to process, and finally get the output</p>
+<img alt="_images/model_onehot_embedding_cnn_one_branch.png" src="_images/model_onehot_embedding_cnn_one_branch.png" />
+<p>After using one-hot encoding and embedding, use CNN to process the model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively. Then use the 6mer embedding layer for embedding, then merge the two embedding data, and then send it to the CNN unit, use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat this CNN Unit three times, then enter the flatten layer, then send to the dense layer, the layer size is 2048, 2048, 1000. Insert a dropout layer between the two dense layers to prevent the model from overfitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_embedding_cnn_one_branch.png" src="_images/onehot_embedding_cnn_one_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_embedding_cnn_one_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">3000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">2000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+embedding <span class="o">(</span>Embedding<span class="o">)</span>           <span class="o">(</span>None, <span class="m">3000</span>, <span class="m">6</span><span class="o">)</span>      <span class="m">24582</span>       input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+embedding_1 <span class="o">(</span>Embedding<span class="o">)</span>         <span class="o">(</span>None, <span class="m">2000</span>, <span class="m">6</span><span class="o">)</span>      <span class="m">24582</span>       input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">5000</span>, <span class="m">6</span><span class="o">)</span>      <span class="m">0</span>           embedding<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 embedding_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>         <span class="o">(</span>None, <span class="m">166</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">23360</span>       concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">0</span>           sequential<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_1 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">42496</span>       flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">0</span>           batch_normalization_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">5440000</span>     dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_3 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_3 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1</span><span class="o">)</span>            <span class="m">513</span>         dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">5</span>,822,285
+Trainable params: <span class="m">5</span>,798,861
+Non-trainable params: <span class="m">23</span>,424
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_embedding_cnn_one_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-embedding-cnn-two-branch">
+<h3>onehot_embedding_cnn_two_branch<a class="headerlink" href="#onehot-embedding-cnn-two-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different embedding layers for embedding and then send to different CNN networks, and then merge the CNN networks to finally get the output</p>
+<img alt="_images/model_onehot_embedding_cnn_two_branch.png" src="_images/model_onehot_embedding_cnn_two_branch.png" />
+<p>After using one-hot encoding and embedding, use CNN to process the model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively. Then use the 6mer embedding layer for embedding, and then send it to the CNN unit, use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat the CNN unit three times, and then merge the Sequence in Interaction The CNN result of Region1 and the CNN result of Sequence in Interaction Region2. Then enter the flatten layer, and then send to the dense layer, the layer size is 2048, 2048, 1000. Insert a dropout layer between the two dense layers to prevent the model from overfitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_embedding_cnn_two_branch.png" src="_images/onehot_embedding_cnn_two_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_embedding_cnn_two_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">3000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">2000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+embedding <span class="o">(</span>Embedding<span class="o">)</span>           <span class="o">(</span>None, <span class="m">3000</span>, <span class="m">6</span><span class="o">)</span>      <span class="m">24582</span>       input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+embedding_1 <span class="o">(</span>Embedding<span class="o">)</span>         <span class="o">(</span>None, <span class="m">2000</span>, <span class="m">6</span><span class="o">)</span>      <span class="m">24582</span>       input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>         <span class="o">(</span>None, <span class="m">100</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">23360</span>       embedding<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential_1 <span class="o">(</span>Sequential<span class="o">)</span>       <span class="o">(</span>None, <span class="m">100</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">15680</span>       embedding_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">6400</span><span class="o">)</span>         <span class="m">0</span>           sequential<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten_1 <span class="o">(</span>Flatten<span class="o">)</span>             <span class="o">(</span>None, <span class="m">6400</span><span class="o">)</span>         <span class="m">0</span>           sequential_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">0</span>           flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 flatten_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">51200</span>       concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">0</span>           batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">6554112</span>     dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_3 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_4 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_3 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_4<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1</span><span class="o">)</span>            <span class="m">513</span>         dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">6</span>,960,781
+Trainable params: <span class="m">6</span>,932,877
+Non-trainable params: <span class="m">27</span>,904
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_embedding_cnn_two_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-dense">
+<h3>onehot_dense<a class="headerlink" href="#onehot-dense" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to multiple dense layers and output</p>
+<img alt="_images/model_onehot_dense.png" src="_images/model_onehot_dense.png" />
+<p>Dense model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2, and then merge the two one-hot encoded data. Then flatten the data and send it to the dense layer. The dense layer has five layers, which contain 2048, 2048, 2048, 2048, and 1000 parameters respectively. A dropout layer is inserted between the two dense layers to prevent the model from overfitting, and finally the one-hot code is output. The result of the form (2 values). This model imitates the well-known image processing model VGG16, which has more parameters and can obtain better results.</p>
+<img alt="_images/onehot_dense.png" src="_images/onehot_dense.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_dense</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;sequential&quot;</span>
+_________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                 Output Shape              Param <span class="c1">#</span>
+<span class="o">=================================================================</span>
+flatten <span class="o">(</span>Flatten<span class="o">)</span>            <span class="o">(</span>None, <span class="m">100010</span><span class="o">)</span>            <span class="m">0</span>
+_________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNo <span class="o">(</span>None, <span class="m">100010</span><span class="o">)</span>            <span class="m">400040</span>
+_________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">204822528</span>
+_________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>            <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">4196352</span>
+_________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>          <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">4196352</span>
+_________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>          <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_3 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">4196352</span>
+_________________________________________________________________
+dropout_3 <span class="o">(</span>Dropout<span class="o">)</span>          <span class="o">(</span>None, <span class="m">2048</span><span class="o">)</span>              <span class="m">0</span>
+_________________________________________________________________
+dense_4 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">1000</span><span class="o">)</span>              <span class="m">2049000</span>
+_________________________________________________________________
+dense_5 <span class="o">(</span>Dense<span class="o">)</span>              <span class="o">(</span>None, <span class="m">2</span><span class="o">)</span>                 <span class="nv">2002</span>
+<span class="o">=================================================================</span>
+Total params: <span class="m">219</span>,862,626
+Trainable params: <span class="m">219</span>,662,606
+Non-trainable params: <span class="m">200</span>,020
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_dense.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-resnet18">
+<h3>onehot_resnet18<a class="headerlink" href="#onehot-resnet18" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to The simplified (due to GPU memory usage) and improved resnet18, finally get the output.</p>
+<img alt="_images/model_onehot_resnet18.jpg" src="_images/model_onehot_resnet18.jpg" />
+<p>Resnet model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2, and then merge the two one-hot encoded data. Use the resnet18 model with KERNEL_SIZE = 16, strides = 4, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_resnet18.png" src="_images/onehot_resnet18.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_resnet18</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;res_net_type_i&quot;</span>
+_________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                 Output Shape              Param <span class="c1">#</span>
+<span class="o">=================================================================</span>
+conv2d <span class="o">(</span>Conv2D<span class="o">)</span>              multiple                  <span class="m">1600</span>
+_________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNo multiple                  <span class="m">256</span>
+_________________________________________________________________
+max_pooling2d <span class="o">(</span>MaxPooling2D<span class="o">)</span> multiple                  <span class="m">0</span>
+_________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>      <span class="o">(</span>None, <span class="m">313</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>        <span class="m">398912</span>
+_________________________________________________________________
+sequential_2 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">20</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>         <span class="m">398912</span>
+_________________________________________________________________
+sequential_4 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">2</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>          <span class="m">398912</span>
+_________________________________________________________________
+sequential_6 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">1</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>          <span class="m">398912</span>
+_________________________________________________________________
+global_average_pooling2d <span class="o">(</span>Gl multiple                  <span class="m">0</span>
+_________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                multiple                  <span class="nv">130</span>
+<span class="o">=================================================================</span>
+Total params: <span class="m">1</span>,597,634
+Trainable params: <span class="m">1</span>,594,946
+Non-trainable params: <span class="m">2</span>,688
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_resnet18.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="onehot-resnet34">
+<h3>onehot_resnet34<a class="headerlink" href="#onehot-resnet34" title="Permalink to this headline">¶</a></h3>
+<p>Use one-hot encoding to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer, and then send it to The simplified (due to GPU memory usage) and improved resnet34, finally get the output.</p>
+<img alt="_images/model_onehot_resnet34.jpg" src="_images/model_onehot_resnet34.jpg" />
+<p>Resnet model: First, perform one-hot encoding on Sequence in Interaction Region1 and Sequence in Interaction Region2, and then merge the two one-hot encoded data. Use the resnet34 model with KERNEL_SIZE = 16, strides = 4, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/onehot_resnet18.png" src="_images/onehot_resnet18.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">onehot_resnet34</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;res_net_type_i&quot;</span>
+_________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                 Output Shape              Param <span class="c1">#</span>
+<span class="o">=================================================================</span>
+conv2d <span class="o">(</span>Conv2D<span class="o">)</span>              multiple                  <span class="m">1600</span>
+_________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNo multiple                  <span class="m">256</span>
+_________________________________________________________________
+max_pooling2d <span class="o">(</span>MaxPooling2D<span class="o">)</span> multiple                  <span class="m">0</span>
+_________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>      <span class="o">(</span>None, <span class="m">79</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>         <span class="m">596160</span>
+_________________________________________________________________
+sequential_2 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">1</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>          <span class="m">793408</span>
+_________________________________________________________________
+sequential_4 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">1</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>          <span class="m">1187904</span>
+_________________________________________________________________
+sequential_6 <span class="o">(</span>Sequential<span class="o">)</span>    <span class="o">(</span>None, <span class="m">1</span>, <span class="m">1</span>, <span class="m">64</span><span class="o">)</span>          <span class="m">596160</span>
+_________________________________________________________________
+global_average_pooling2d <span class="o">(</span>Gl multiple                  <span class="m">0</span>
+_________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                multiple                  <span class="nv">130</span>
+<span class="o">=================================================================</span>
+Total params: <span class="m">3</span>,175,618
+Trainable params: <span class="m">3</span>,170,882
+Non-trainable params: <span class="m">4</span>,736
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">onehot_resnet34.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="embedding-cnn-one-branch">
+<h3>embedding_cnn_one_branch<a class="headerlink" href="#embedding-cnn-one-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use CNN to process, and finally get the output</p>
+<img alt="_images/model_embedding_cnn_one_branch.png" src="_images/model_embedding_cnn_one_branch.png" />
+<p>Single branch cnn model: First embed the Sequence in Interaction Region1 and Sequence in Interaction Region2, then merge the two embedding data. The embedding matrix uses the hg19 matrix trained by DNA2vec, the size is 6mer (4097, where the first item is all 0) x100 dimensions. Use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat this CNN unit three times, then flatten the data and send it to the dense layer, insert a dropout layer between the two dense layers to prevent the model Over-fitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/embedding_cnn_one_branch.png" src="_images/embedding_cnn_one_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">embedding_cnn_one_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">3000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">2000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+embedding <span class="o">(</span>Embedding<span class="o">)</span>           <span class="o">(</span>None, <span class="m">3000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+embedding_1 <span class="o">(</span>Embedding<span class="o">)</span>         <span class="o">(</span>None, <span class="m">2000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">5000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">0</span>           embedding<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 embedding_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>         <span class="o">(</span>None, <span class="m">166</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">384320</span>      concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">0</span>           sequential<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_1 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">42496</span>       flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">10624</span><span class="o">)</span>        <span class="m">0</span>           batch_normalization_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">5440000</span>     dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_3 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_3 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1</span><span class="o">)</span>            <span class="m">513</span>         dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">6</span>,953,481
+Trainable params: <span class="m">6</span>,930,057
+Non-trainable params: <span class="m">23</span>,424
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">embedding_cnn_one_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="embedding-cnn-two-branch">
+<h3>embedding_cnn_two_branch<a class="headerlink" href="#embedding-cnn-two-branch" title="Permalink to this headline">¶</a></h3>
+<p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, and then send the promoter and enhancer to different CNN networks, and then merge the CNN networks to finally get the output</p>
+<img alt="_images/model_embedding_cnn_two_branch.png" src="_images/model_embedding_cnn_two_branch.png" />
+<p>Two-branch cnn model: First, perform embedding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively, and then merge the two embedding data. The embedding matrix uses the hg19 matrix trained by DNA2vec, the size is 6mer (4097, where the first item is full Is 0) x100 dimensions. Then the data is sent to the CNN unit. Use the CNN layer with KERNEL_SIZE = 24, strides = 4, the activation layer and the BatchNormalization layer as a CNN unit, repeat this CNN unit three times, then merge the Sequence in Interaction Region1 branch and Sequence in Interaction Region2 branch of the CNN unit and flatten the data and Send it to the dense layer, insert a dropout layer between the two dense layers to prevent the model from overfitting, and finally output the result (2 values) in the form of one-hot encoding.</p>
+<img alt="_images/embedding_cnn_two_branch.png" src="_images/embedding_cnn_two_branch.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">embedding_cnn_two_branch</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">3000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">2000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+embedding <span class="o">(</span>Embedding<span class="o">)</span>           <span class="o">(</span>None, <span class="m">3000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+embedding_1 <span class="o">(</span>Embedding<span class="o">)</span>         <span class="o">(</span>None, <span class="m">2000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential <span class="o">(</span>Sequential<span class="o">)</span>         <span class="o">(</span>None, <span class="m">100</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">384320</span>      embedding<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+sequential_1 <span class="o">(</span>Sequential<span class="o">)</span>       <span class="o">(</span>None, <span class="m">100</span>, <span class="m">64</span><span class="o">)</span>      <span class="m">256320</span>      embedding_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">6400</span><span class="o">)</span>         <span class="m">0</span>           sequential<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten_1 <span class="o">(</span>Flatten<span class="o">)</span>             <span class="o">(</span>None, <span class="m">6400</span><span class="o">)</span>         <span class="m">0</span>           sequential_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">0</span>           flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 flatten_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">51200</span>       concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">12800</span><span class="o">)</span>        <span class="m">0</span>           batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">6554112</span>     dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_3 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_4 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_3 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_4<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1</span><span class="o">)</span>            <span class="m">513</span>         dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">8</span>,332,617
+Trainable params: <span class="m">8</span>,304,713
+Non-trainable params: <span class="m">27</span>,904
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">embedding_cnn_two_branch.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="embedding-dense">
+<h3>embedding_dense<a class="headerlink" href="#embedding-dense" title="Permalink to this headline">¶</a></h3>
+<p>Use dna2vec embedding (you can customize the training embedding matrix) to process the ACGT base fragments of the promoter and enhancer, then merge the promoter and enhancer together, and then use multiple dense layers to process, and finally get the output</p>
+<img alt="_images/model_embedding_dense.png" src="_images/model_embedding_dense.png" />
+<p>Dense model: First, perform embedding on Sequence in Interaction Region1 and Sequence in Interaction Region2 respectively, then merge the two embedding data, where the embedding matrix uses the hg19 matrix trained by DNA2vec, the size is 6mer (4097, where the first item is all 0) x100 dimensions. Then flatten the data and send it to the dense layer. The dense layer has five layers, which contain 2048, 2048, 2048, 2048, and 1000 parameters respectively. A dropout layer is inserted between the two dense layers to prevent the model from overfitting, and finally the one-hot code is output. The result of the form (2 values).</p>
+<img alt="_images/embedding_dense.png" src="_images/embedding_dense.png" />
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">structure</span> <span class="pre">of</span> <span class="pre">embedding_dense</span> <span class="pre">is</span> <span class="pre">shown</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">figure</span> <span class="pre">above.</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Model: <span class="s2">&quot;functional_1&quot;</span>
+__________________________________________________________________________________________________
+Layer <span class="o">(</span><span class="nb">type</span><span class="o">)</span>                    Output Shape         Param <span class="c1">#     Connected to</span>
+<span class="o">==================================================================================================</span>
+input_1 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">3000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+input_2 <span class="o">(</span>InputLayer<span class="o">)</span>            <span class="o">[(</span>None, <span class="m">2000</span><span class="o">)]</span>       <span class="m">0</span>
+__________________________________________________________________________________________________
+embedding <span class="o">(</span>Embedding<span class="o">)</span>           <span class="o">(</span>None, <span class="m">3000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+embedding_1 <span class="o">(</span>Embedding<span class="o">)</span>         <span class="o">(</span>None, <span class="m">2000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">409700</span>      input_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+concatenate <span class="o">(</span>Concatenate<span class="o">)</span>       <span class="o">(</span>None, <span class="m">5000</span>, <span class="m">100</span><span class="o">)</span>    <span class="m">0</span>           embedding<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+                                                                                                                                 embedding_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+flatten <span class="o">(</span>Flatten<span class="o">)</span>               <span class="o">(</span>None, <span class="m">500000</span><span class="o">)</span>       <span class="m">0</span>           concatenate<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout <span class="o">(</span>Dropout<span class="o">)</span>               <span class="o">(</span>None, <span class="m">500000</span><span class="o">)</span>       <span class="m">0</span>           flatten<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense <span class="o">(</span>Dense<span class="o">)</span>                   <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">256000512</span>   dropout<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization <span class="o">(</span>BatchNorma <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation <span class="o">(</span>Activation<span class="o">)</span>         <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_1 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_1 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_1 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_1 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_2 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_1<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_2 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">262656</span>      dropout_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+batch_normalization_2 <span class="o">(</span>BatchNor <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">2048</span>        dense_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+activation_2 <span class="o">(</span>Activation<span class="o">)</span>       <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           batch_normalization_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dropout_3 <span class="o">(</span>Dropout<span class="o">)</span>             <span class="o">(</span>None, <span class="m">512</span><span class="o">)</span>          <span class="m">0</span>           activation_2<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+__________________________________________________________________________________________________
+dense_3 <span class="o">(</span>Dense<span class="o">)</span>                 <span class="o">(</span>None, <span class="m">1</span><span class="o">)</span>            <span class="m">513</span>         dropout_3<span class="o">[</span><span class="m">0</span><span class="o">][</span><span class="m">0</span><span class="o">]</span>
+<span class="o">==================================================================================================</span>
+Total params: <span class="m">257</span>,351,881
+Trainable params: <span class="m">257</span>,348,809
+Non-trainable params: <span class="m">3</span>,072
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">above</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">model</span> <span class="pre">parameters</span> <span class="pre">and</span> <span class="pre">size</span> <span class="pre">information</span> <span class="pre">of</span> <span class="pre">embedding_dense.</span></code></p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tools.html" class="btn btn-neutral float-right" title="Log and Processing Tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test.py.html" class="btn btn-neutral float-left" title="test.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

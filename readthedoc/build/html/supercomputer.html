@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Run on a Supercomputer &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DeepChromeHiC.py" href="DeepChromeHiC.py.html" />
+    <link rel="prev" title="DeepChromeHiC Quickstart" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Run on a Supercomputer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#supercomputer-using-the-ubantu-system">Supercomputer using the Ubantu system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supercomputer-using-the-slurm-job-system">Supercomputer using the Slurm job system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supercomputer-using-the-pbs-job-system">Supercomputer using the PBS job system</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reStructuredText.html">reStructuredText Writing Help</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Run on a Supercomputer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/supercomputer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <img alt="_images/data-center-carbonate-HERO.jpg" src="_images/data-center-carbonate-HERO.jpg" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="run-on-a-supercomputer">
+<h1>Run on a Supercomputer<a class="headerlink" href="#run-on-a-supercomputer" title="Permalink to this headline">¶</a></h1>
+<p>DeepChromeHiC consumes computing resources very much and generates a lot of data. The program can be run on a supercomputer.</p>
+<p>This chapter will introduce how to run DeepChromeHiC on a supercomputer.</p>
+<div class="section" id="supercomputer-using-the-ubantu-system">
+<h2>Supercomputer using the Ubantu system<a class="headerlink" href="#supercomputer-using-the-ubantu-system" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC</span></code> to your supercomputer directory</p></li>
+<li><p>Execute the command to <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC</span></code> directory</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> D:<span class="se">\D</span>eepChromeHiC
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create a new folder called <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">gene</span> <span class="pre">name</span></code> in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder, for example, <code class="docutils literal notranslate"><span class="pre">AD2.po</span></code>.</p>
+<blockquote>
+<div><p>Then paste your genetic data into this folder.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer negative fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter negative fragments</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Use python3 to preprocess the data so that train and test can be run later</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -p <span class="nb">true</span> -n AD2.po
+</pre></div>
+</div>
+<p>Then it will automatically start pre-processing AD2.po.</p>
+<p>This step will generate png files and npz files.</p>
+</div></blockquote>
+</li>
+<li><p>Use python3 to run DeepChromeHiC-train, here is AD2.po as an example</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m embedding_dense -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t train -n AD2.po
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Use python3 to run DeepChromeHiC-test, here is AD2.po as an example</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m embedding_dense -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get results</p>
+<blockquote>
+<div><p>All picture results are saved in the <code class="docutils literal notranslate"><span class="pre">result</span></code> folder, for convenience, the text results are all in <code class="docutils literal notranslate"><span class="pre">log.txt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">log.txt</span></code> adopts the append mode, which means that the previous results will always remain in the <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> file and will not be deleted due to the running program. If you want to re-record the output results, then you need to delete the <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> folder.</p>
+</div></blockquote>
+</li>
+</ol>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+<div class="section" id="supercomputer-using-the-slurm-job-system">
+<h2>Supercomputer using the Slurm job system<a class="headerlink" href="#supercomputer-using-the-slurm-job-system" title="Permalink to this headline">¶</a></h2>
+<p>If the supercomputer you use is publicly used on campus, it is likely to use the slurm job system or the PBS job system to manage all jobs.</p>
+<p>To use the slurm job system or the PBS job system, you need to write .sh scripts to arrange jobs.</p>
+<ol class="arabic">
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC</span></code> to your supercomputer directory</p></li>
+<li><p>Execute the command to <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC</span></code> directory</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> D:<span class="se">\D</span>eepChromeHiC
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Create a new folder called <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">gene</span> <span class="pre">name</span></code> in the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder, for example, <code class="docutils literal notranslate"><span class="pre">AD2.po</span></code>.</p>
+<blockquote>
+<div><p>Then paste your genetic data into this folder.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor1.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the enhancer negative fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.pos.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter positive fragments</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seq.anchor2.neg2.txt</span></code></p>
+<blockquote>
+<div><p>Put in the promoter negative fragments</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Use python3 to preprocess the data so that train and test can be run later:</p>
+<blockquote>
+<div><p>Write a slurm script into the <code class="docutils literal notranslate"><span class="pre">slurm</span></code> folder, for example <code class="docutils literal notranslate"><span class="pre">prep_AD2.po.sh</span></code></p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">vim</span></code> tool to write directly in Linux or use tools such as <code class="docutils literal notranslate"><span class="pre">winscp</span></code> to copy scripts written on Windows to your linux, but please note that in Windows, use <code class="docutils literal notranslate"><span class="pre">\r\n</span></code> for line breaks, but for linux use <code class="docutils literal notranslate"><span class="pre">\n</span></code> So you need to use a tool such as <code class="docutils literal notranslate"><span class="pre">Notepad++</span></code> to delete (replace it with empty) <code class="docutils literal notranslate"><span class="pre">\r</span></code>, otherwise linux will report an error.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH -J prep_AD2.po</span>
+<span class="c1">#SBATCH -p general</span>
+<span class="c1">#SBATCH -o log/prep_AD2.po_%j.log</span>
+<span class="c1">#SBATCH -e log/prep_AD2.po_%j.err</span>
+<span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="c1">#SBATCH --mail-user=Write your work email here!</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=24:00:00</span>
+<span class="c1">#SBATCH --mem=64G</span>
+
+module load deeplearning/2.3.0
+
+<span class="nb">cd</span> ..
+
+python3 DeepChromeHiC.py -p <span class="nb">true</span> -n AD2.po
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<div class="topic">
+<p class="topic-title">Description</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p>
+<blockquote>
+<div><p>This is a bash script, so linux can recognize the text content</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-J</span> <span class="pre">prep_AD2.po</span></code></p>
+<blockquote>
+<div><p>Let’s give this script a name so that we can see the name when we look at the task later. Please modify this name so that it can be clearly displayed in the task list</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-p</span> <span class="pre">general</span></code></p>
+<blockquote>
+<div><p>On the supercomputer I use, tasks that use cpu use the general node, so general is written here. If you need more information, please consult the slurm documentation or check your school’s supercomputer usage plan.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-o</span> <span class="pre">log/prep_AD2.po_%j.log</span></code></p>
+<blockquote>
+<div><p>When sulrm is running, nothing will be output to the screen, so a document is needed to save the logs and errors during slurm running, so that it can be checked later. Here is the log file. The log will be output to <code class="docutils literal notranslate"><span class="pre">log/prep_AD2.po_%j.log</span></code>, which is the <code class="docutils literal notranslate"><span class="pre">prep_AD2.po_%j.log</span></code> file under the <code class="docutils literal notranslate"><span class="pre">log</span></code> folder, where <code class="docutils literal notranslate"><span class="pre">%j</span></code> is the task number assigned to you by slurm.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-e</span> <span class="pre">log/prep_AD2.po_%j.err</span></code></p>
+<blockquote>
+<div><p>When sulrm is running, nothing will be output to the screen, so a document is needed to save the logs and errors during slurm running, so that it can be checked later. Here is the error file. Errors and prompts will be output to <code class="docutils literal notranslate"><span class="pre">log/prep_AD2.po_%j.err</span></code>, which is the <code class="docutils literal notranslate"><span class="pre">prep_AD2.po_%j.err</span></code> file under the <code class="docutils literal notranslate"><span class="pre">log</span></code> folder, where <code class="docutils literal notranslate"><span class="pre">%j</span></code> is the task number assigned to you by slurm.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mail-type=ALL</span></code></p>
+<blockquote>
+<div><p>All emails will be sent to you, including task start email, task end email, and task error email. These emails contain various information, including how long your task has been performed, how long you have waited in the team, cpu usage, memory usage, gpu usage, etc.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mail-user=Write</span> <span class="pre">your</span> <span class="pre">work</span> <span class="pre">email</span> <span class="pre">here!</span></code></p>
+<blockquote>
+<div><p>Replace <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">your</span> <span class="pre">work</span> <span class="pre">email</span> <span class="pre">here!</span></code> with your email address so that you can receive emails.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--nodes=1</span></code></p>
+<blockquote>
+<div><p>The number of nodes used by the task. Because python runs on a single core, you can write 1 directly here</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--ntasks-per-node=1</span></code></p>
+<blockquote>
+<div><p>The number of nodes used by the task. Because python runs on a single core, you can write 1 directly here</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--cpus-per-task=1</span></code></p>
+<blockquote>
+<div><p>The number of nodes used by the task. Because python runs on a single core, you can write 1 directly here</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--time=24:00:00</span></code></p>
+<blockquote>
+<div><p>The maximum running time, write as long as possible, if the running time is exceeded and the running is not completed, then the task will be ended directly, which is what we don’t want to see</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mem=64G</span></code></p>
+<blockquote>
+<div><p>Run the memory size, write as large as possible, if possible, please keep the content size of 64GB, if the memory usage exceeds the maximum memory, the task will fail directly. This is what we don’t want to see.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">deeplearning/2.3.0</span></code></p>
+<blockquote>
+<div><p>If the system you are using is <code class="docutils literal notranslate"><span class="pre">redhat</span></code> and module is used to manage system <code class="docutils literal notranslate"><span class="pre">modules</span></code>, then please load modules containing python3 and various libraries so that it can run normally in the future.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code></p>
+<blockquote>
+<div><p>Because all slurm scripts are in the slurm folder, this is the root directory of this program. In order to access <code class="docutils literal notranslate"><span class="pre">DeepChromeHiC.py</span></code> normally, you need to jump to the upper level directory. The purpose here is even so</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-p</span> <span class="pre">true</span> <span class="pre">-n</span> <span class="pre">AD2.po</span></code></p>
+<blockquote>
+<div><p>Use python3 to run DeepChromeHiC.py to prepare the <code class="docutils literal notranslate"><span class="pre">png</span></code> file and <code class="docutils literal notranslate"><span class="pre">npz</span></code> file of <code class="docutils literal notranslate"><span class="pre">AD2.po</span></code>.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">your</span> <span class="pre">work</span> <span class="pre">email</span> <span class="pre">here!</span></code> with your work email</p>
+</div>
+</div>
+<ol class="arabic" start="5">
+<li><p>Run the slurm script</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> DeepChromeHiC
+<span class="nb">cd</span> slurm
+sbatch prep_AD2.po.sh
+</pre></div>
+</div>
+<p>Enter your <code class="docutils literal notranslate"><span class="pre">slurm</span></code> folder and run the script <code class="docutils literal notranslate"><span class="pre">prep_AD2.po.sh</span></code> written before</p>
+</div></blockquote>
+</li>
+<li><p>Use python3 to run DeepChromeHiC-train, here is AD2.po as an example</p>
+<blockquote>
+<div><p>We need to write the slurm script first and then run the script. In this step, we first write the slurm script.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH -J train_AD2.po</span>
+<span class="c1">#SBATCH -p dl</span>
+<span class="c1">#SBATCH --gres=gpu:v100:1</span>
+<span class="c1">#SBATCH -o log/train_AD2.po_%j.log</span>
+<span class="c1">#SBATCH -e log/train_AD2.po_%j.err</span>
+<span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="c1">#SBATCH --mail-user=Write your work email here!</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --time=48:00:00</span>
+<span class="c1">#SBATCH --mem=32G</span>
+
+module load deeplearning/2.3.0
+
+<span class="nb">cd</span> ..
+
+python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m embedding_dense -t train -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t train -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t train -n AD2.po
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<div class="topic">
+<p class="topic-title">Description</p>
+<p>Here I only write the parts that are different from the previous step. For the same parts, please refer to the previous part.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-p</span> <span class="pre">dl</span></code></p>
+<blockquote>
+<div><p>Here we use a node with GPU. On my supercomputer, it is <code class="docutils literal notranslate"><span class="pre">dl</span></code> (abbreviation for deeplearning). Please refer to the name of your supercomputer node and replace it with your supercomputer node.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--gres=gpu:v100:1</span></code></p>
+<blockquote>
+<div><p>The GPU is used here, and the GPU name must be specified in slurm. Here, a NVIDIA v100 GPU is used. Please note that multiple GPUs should not be used here unless the GPU is virtualized. In addition, do <code class="docutils literal notranslate"><span class="pre">not</span></code> use a GPU with a video memory size of <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">than</span> <span class="pre">8GB</span></code>. Which can not finish the entire program.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--time=48:00:00</span></code></p>
+<blockquote>
+<div><p>Please increase the running time as much as possible, because this procedure is more time-consuming than the previous prep procedure. If the time is too short, it may not be able to complete the whole procedure with the operation.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--mem=32G</span></code></p>
+<blockquote>
+<div><p>Please specify the memory size, generally <code class="docutils literal notranslate"><span class="pre">8GB</span></code> is sufficient, but if the gene fragment is too large, please use more memory (python3 memory leak problem is bad)</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">DeepChromeHiC.py</span> <span class="pre">-m</span> <span class="pre">onehot_cnn_one_branch</span> <span class="pre">-t</span> <span class="pre">train</span> <span class="pre">-n</span> <span class="pre">AD2.po</span></code></p>
+<blockquote>
+<div><p>Here we directly run 11 different models. Generally speaking, it takes between 3-10 hours for a gene fragment of normal size.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">your</span> <span class="pre">work</span> <span class="pre">email</span> <span class="pre">here!</span></code> with your work email</p>
+</div>
+</div>
+<ol class="arabic" start="7">
+<li><p>Run the slurm script to execute the training program</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> DeepChromeHiC
+<span class="nb">cd</span> slurm
+sbatch train_AD2.po.sh
+</pre></div>
+</div>
+<p>Enter your <code class="docutils literal notranslate"><span class="pre">slurm</span></code> folder and run the script <code class="docutils literal notranslate"><span class="pre">train_AD2.po.sh</span></code> written before</p>
+</div></blockquote>
+</li>
+<li><p>Use python3 to run DeepChromeHiC-test, here is AD2.po as an example</p>
+<blockquote>
+<div><p>We need to write a slurm script to arrange the job and run the test program.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH -J test</span>
+<span class="c1">#SBATCH -p dl</span>
+<span class="c1">#SBATCH --gres=gpu:v100:1</span>
+<span class="c1">#SBATCH -o log/test_%j.log</span>
+<span class="c1">#SBATCH -e log/test_%j.err</span>
+<span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="c1">#SBATCH --mail-user=Write your work email here!</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks-per-node=1</span>
+<span class="c1">#SBATCH --time=48:00:00</span>
+<span class="c1">#SBATCH --mem=64G</span>
+
+module load deeplearning/2.3.0
+
+<span class="nb">cd</span> ..
+
+
+
+
+
+python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m embedding_dense -t <span class="nb">test</span> -n AD2.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t <span class="nb">test</span> -n AD2.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t <span class="nb">test</span> -n AD2.po
+
+
+
+
+
+python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t <span class="nb">test</span> -n AO.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t <span class="nb">test</span> -n AO.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m embedding_dense -t <span class="nb">test</span> -n AO.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t <span class="nb">test</span> -n AO.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t <span class="nb">test</span> -n AO.po
+
+
+
+
+
+python3 DeepChromeHiC.py -m onehot_cnn_one_branch -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m onehot_cnn_two_branch -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m onehot_embedding_dense -t <span class="nb">test</span> -n BL1.po
+
+python3 DeepChromeHiC.py -m onehot_dense -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m onehot_resnet18 -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m onehot_resnet34 -t <span class="nb">test</span> -n BL1.po
+
+python3 DeepChromeHiC.py -m embedding_cnn_one_branch -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m embedding_cnn_two_branch -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m embedding_dense -t <span class="nb">test</span> -n BL1.po
+
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_one_branch -t <span class="nb">test</span> -n BL1.po
+python3 DeepChromeHiC.py -m onehot_embedding_cnn_two_branch -t <span class="nb">test</span> -n BL1.po
+
+
+
+
+
+.
+.
+.
+.
+.
+</pre></div>
+</div>
+<p>The time required for the test is relatively short, about 30 minutes for each gene fragment, so you can test multiple fragments at a time, just as written in my program, I tested three gene fragments at a time. Note that python3 has a memory leak problem, so more memory is needed to ensure that the program can run normally.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">your</span> <span class="pre">work</span> <span class="pre">email</span> <span class="pre">here!</span></code> with your work email</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get results</p>
+<blockquote>
+<div><p>All picture results are saved in the <code class="docutils literal notranslate"><span class="pre">result</span></code> folder, for convenience, the text results are all in <code class="docutils literal notranslate"><span class="pre">log.txt</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">log.txt</span></code> adopts the append mode, which means that the previous results will always remain in the <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> file and will not be deleted due to the running program. If you want to re-record the output results, then you need to delete the <code class="docutils literal notranslate"><span class="pre">log.txt</span></code> folder.</p>
+<p>Using slurm can quickly detect multiple genes. For example, this supercomputer can run 30 CPU scripts and 4 GPU scripts at a time. Using slurm can save the idle time between programs.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="supercomputer-using-the-pbs-job-system">
+<h2>Supercomputer using the PBS job system<a class="headerlink" href="#supercomputer-using-the-pbs-job-system" title="Permalink to this headline">¶</a></h2>
+<p>The use of PBS script and Slurm script are very similar, so I won’t go into details here. For resource application, please refer to Slurm resource application.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="DeepChromeHiC.py.html" class="btn btn-neutral float-right" title="DeepChromeHiC.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="DeepChromeHiC Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

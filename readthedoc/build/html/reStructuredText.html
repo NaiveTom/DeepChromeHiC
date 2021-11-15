@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>reStructuredText Writing Help &mdash; DeepChromeHiC 2.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Log and Processing Tools" href="tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> DeepChromeHiC
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Catalog:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">DeepChromeHiC Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supercomputer.html">Run on a Supercomputer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DeepChromeHiC.py.html">DeepChromeHiC.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datastructure.html">Data Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_preprocessing.py.html">data_preprocessing.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="train.py.html">train.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.py.html">test.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.py.html">model.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Log and Processing Tools</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">reStructuredText Writing Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#level-1-heading">Level 1 heading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#level-2-heading">Level 2 heading</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#level-3-heading">Level 3 heading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DeepChromeHiC</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>reStructuredText Writing Help</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/reStructuredText.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="restructuredtext-writing-help">
+<h1>reStructuredText Writing Help<a class="headerlink" href="#restructuredtext-writing-help" title="Permalink to this headline">¶</a></h1>
+<p>This module will introduce all the writing formats of this text.</p>
+<p>If you need to modify the text or fork this document, please read this chapter.</p>
+<p>If you need more information, please search the language of this document: <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code></p>
+<p>You can click <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">Source</span> <span class="pre">Code</span></code> in the <code class="docutils literal notranslate"><span class="pre">upper</span> <span class="pre">right</span> <span class="pre">corner</span></code> to view the source code of this page.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="n">reStructuredText</span>
+<span class="o">================</span>
+</pre></div>
+</div>
+<p>This code will generate the title of this document, as you can see.</p>
+<p>This title will automatically be added to the directory column on the left and the directory section of the welcome interface on the homepage.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="level-1-heading">
+<h2>Level 1 heading<a class="headerlink" href="#level-1-heading" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="n">Level</span> <span class="mi">1</span> <span class="n">heading</span>
+<span class="o">+++++++++++++++</span>
+</pre></div>
+</div>
+<p>This code will generate a first-level heading.</p>
+<p>This title will automatically be added to the directory column on the left and the directory section of the welcome interface on the homepage.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="level-2-heading">
+<h3>Level 2 heading<a class="headerlink" href="#level-2-heading" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="n">Level</span> <span class="mi">2</span> <span class="n">heading</span>
+<span class="o">---------------</span>
+</pre></div>
+</div>
+<p>This code will generate a second-level heading.</p>
+<p>This title will automatically be added to the directory column on the left and the directory section of the welcome interface on the homepage.</p>
+<p>You can see the relationship between the first-level directory and the second-level directory through the navigation bar on the left.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="section" id="level-3-heading">
+<h4>Level 3 heading<a class="headerlink" href="#level-3-heading" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="n">Level</span> <span class="mi">3</span> <span class="n">heading</span>
+<span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span><span class="s2">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>This code will generate a third-level heading.</p>
+<p>This title will automatically be added to the directory column on the left and the directory section of the welcome interface on the homepage.</p>
+<p>You can see the relationship among the first-level directory and the second-level and the third-level directory through the navigation bar on the left.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<p><code class="docutils literal notranslate"><span class="pre">Highlight</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The code needed to complete this module:
+
+``Highlight``
+</pre></div>
+</div>
+<p>Use this mark to highlight text for emphasis.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<p><em>Italic</em></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">*</span><span class="n">Italic</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>This is written in italics, and the text is slanted.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<p><strong>Bold</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">**</span><span class="n">Bold</span><span class="o">**</span>
+</pre></div>
+</div>
+<p>Use two asterisks to make the text bold, and the effect is as above.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HighlightList</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The code needed to complete this module:
+
+- ``HighlightList``
+- ``HighlightList``
+- ``HighlightList``
+- ``HighlightList``
+- ``HighlightList``
+- ``HighlightList``
+</pre></div>
+</div>
+<p>Use the above code to create a Highlight List</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 1 text content</p>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 2 text content</p>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 3 text content</p>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 4 text content</p>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 5 text content</p>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Highlight</span> <span class="pre">List</span></code></dt><dd><p>Level 6 text content</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The code needed to complete this module:
+
+- ``Highlight List``
+        Level 1 text content
+
+        - ``Highlight List``
+                Level 2 text content
+
+                - ``Highlight List``
+                        Level 3 text content
+
+                        - ``Highlight List``
+                                Level 4 text content
+
+                                - ``Highlight List``
+                                        Level 5 text content
+
+                                        - ``Highlight List``
+                                                Level 6 text content
+</pre></div>
+</div>
+<p>Use the above code to create a multi-level Highlight List</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Write code here
+<span class="nb">cd</span> home/test
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">code</span><span class="p">::</span> <span class="n">bash</span>
+
+        <span class="n">Write</span> <span class="n">code</span> <span class="n">here</span>
+        <span class="n">cd</span> <span class="n">home</span><span class="o">/</span><span class="n">test</span>
+</pre></div>
+</div>
+<p>In this way, you can add code without being compiled by the compiler.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<ul class="simple">
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">-</span> <span class="n">A</span> <span class="nb">list</span>
+<span class="o">-</span> <span class="n">A</span> <span class="nb">list</span>
+<span class="o">-</span> <span class="n">A</span> <span class="nb">list</span>
+<span class="o">-</span> <span class="n">A</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>This way you can build a list</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<ol class="arabic simple">
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+<li><p>A list</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="c1">#. A list</span>
+<span class="c1">#. A list</span>
+<span class="c1">#. A list</span>
+<span class="c1">#. A list</span>
+</pre></div>
+</div>
+<p>This way you can build an ordered list</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a note.</p>
+<p>This is the second line of the first paragraph.</p>
+<ul class="simple">
+<li><p>The note contains all indented body elements
+following.</p></li>
+<li><p>It includes this bullet list.</p></li>
+</ul>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">note</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">note</span><span class="o">.</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">paragraph</span><span class="o">.</span>
+
+   <span class="o">-</span> <span class="n">The</span> <span class="n">note</span> <span class="n">contains</span> <span class="nb">all</span> <span class="n">indented</span> <span class="n">body</span> <span class="n">elements</span>
+         <span class="n">following</span><span class="o">.</span>
+   <span class="o">-</span> <span class="n">It</span> <span class="n">includes</span> <span class="n">this</span> <span class="n">bullet</span> <span class="nb">list</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Use the above code to build a note.</p>
+<p>Note that a note cannot have its own title.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition-this-is-a-admonition-you-can-write-what-you-want-here admonition">
+<p class="admonition-title">This is a admonition. You can write what you want here.</p>
+<p>This is the second line of the first paragraph.</p>
+<ul class="simple">
+<li><p>The note contains all indented body elements
+following.</p></li>
+<li><p>It includes this bullet list.</p></li>
+</ul>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">admonition</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">admonition</span><span class="o">.</span> <span class="n">You</span> <span class="n">can</span> <span class="n">write</span> <span class="n">what</span> <span class="n">you</span> <span class="n">want</span> <span class="n">here</span><span class="o">.</span>
+
+   <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">second</span> <span class="n">line</span> <span class="n">of</span> <span class="n">the</span> <span class="n">first</span> <span class="n">paragraph</span><span class="o">.</span>
+
+   <span class="o">-</span> <span class="n">The</span> <span class="n">note</span> <span class="n">contains</span> <span class="nb">all</span> <span class="n">indented</span> <span class="n">body</span> <span class="n">elements</span>
+         <span class="n">following</span><span class="o">.</span>
+   <span class="o">-</span> <span class="n">It</span> <span class="n">includes</span> <span class="n">this</span> <span class="n">bullet</span> <span class="nb">list</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Use the above code to build a admonition.</p>
+<p>Note that a admonition will have its own title.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>This is a danger.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">danger</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">danger</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>This is a error.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">error</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">error</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is a important.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">important</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">important</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is a tip.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">tip</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">tip</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a warning.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">warning</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">warning</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This is a caution.</p>
+<p>Below I will show several different boxes.</p>
+<p>Use it if necessary.</p>
+<p>This will make the document structure clear.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">caution</span><span class="p">::</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">caution</span><span class="o">.</span>
+
+        <span class="n">Below</span> <span class="n">I</span> <span class="n">will</span> <span class="n">show</span> <span class="n">several</span> <span class="n">different</span> <span class="n">boxes</span><span class="o">.</span>
+
+        <span class="n">Use</span> <span class="n">it</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span>
+
+        <span class="n">This</span> <span class="n">will</span> <span class="n">make</span> <span class="n">the</span> <span class="n">document</span> <span class="n">structure</span> <span class="n">clear</span><span class="o">.</span>
+</pre></div>
+</div>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="topic">
+<p class="topic-title">Description</p>
+<p>Resistance is a kind of electrical appliances.</p>
+<p>The diode can only conduct current in one direction.</p>
+<p>The triode is an electronic component.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="o">..</span> <span class="n">topic</span><span class="p">::</span> <span class="n">Description</span>
+
+        <span class="n">Resistance</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">kind</span> <span class="n">of</span> <span class="n">electrical</span> <span class="n">appliances</span><span class="o">.</span>
+
+        <span class="n">The</span> <span class="n">diode</span> <span class="n">can</span> <span class="n">only</span> <span class="n">conduct</span> <span class="n">current</span> <span class="ow">in</span> <span class="n">one</span> <span class="n">direction</span><span class="o">.</span>
+
+        <span class="n">The</span> <span class="n">triode</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">electronic</span> <span class="n">component</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This is a title that will not be written to the table of contents</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<hr class="docutils" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">code</span> <span class="n">needed</span> <span class="n">to</span> <span class="n">complete</span> <span class="n">this</span> <span class="n">module</span><span class="p">:</span>
+
+<span class="c1">##########</span>
+</pre></div>
+</div>
+<p>The dividing line is a common tool used to make the code clearer. The above is how to use it.</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<img alt="_images/earlystopping.png" src="_images/earlystopping.png" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">image</span><span class="p">::</span> <span class="n">img</span><span class="o">/</span><span class="n">earlystopping</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+<p>Inserting a picture is one of the most important operations. The above is the method of inserting a picture.</p>
+<p>The picture must be placed in the <code class="docutils literal notranslate"><span class="pre">img</span></code> folder first, otherwise an error will occur (you can set the file path yourself, but to avoid confusion, use the img folder.)</p>
+<img alt="_images/div.png" src="_images/div.png" />
+<div class="admonition-a-little-tip-written-at-the-end admonition">
+<p class="admonition-title">A little tip written at the end.</p>
+<p>In reStructuredText, a blank line is required between every two lines, otherwise there is no difference between writing on one line. There are some codes if there is no blank line, then an error will occur.</p>
+<p>In reStructuredText, a blank line has the same effect as a blank two or more lines, and both are blank lines.</p>
+<p>The documentation can be found here: <a class="reference external" href="https://docutils.sourceforge.io/0.4/docs/ref/rst/directives.html">https://docutils.sourceforge.io/0.4/docs/ref/rst/directives.html</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tools.html" class="btn btn-neutral float-left" title="Log and Processing Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bizi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
